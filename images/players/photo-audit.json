@@ -143,23 +143,8 @@
       "status": "review"
     },
     {
-      "player": "Xavi",
-      "faces": 0,
-      "status": "review"
-    },
-    {
-      "player": "Roberto Carlos (footballer)",
-      "faces": 6,
-      "status": "review"
-    },
-    {
       "player": "Kim Min-jae",
       "faces": 3,
-      "status": "review"
-    },
-    {
-      "player": "Michel Platini",
-      "faces": 2,
       "status": "review"
     }
   ],
@@ -630,28 +615,13 @@
       "status": "review"
     },
     {
-      "player": "Xavi",
-      "faces": 0,
-      "status": "review"
-    },
-    {
       "player": "Luis Suárez (footballer, born 1987)",
       "faces": 1,
       "status": "one_face_detected"
     },
     {
-      "player": "Roberto Carlos (footballer)",
-      "faces": 6,
-      "status": "review"
-    },
-    {
       "player": "Kim Min-jae",
       "faces": 3,
-      "status": "review"
-    },
-    {
-      "player": "Michel Platini",
-      "faces": 2,
       "status": "review"
     },
     {
@@ -661,6 +631,21 @@
     },
     {
       "player": "Julián Álvarez (footballer)",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Xavi",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Roberto Carlos (footballer)",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Michel Platini",
       "faces": 1,
       "status": "one_face_detected"
     }

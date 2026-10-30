@@ -837,15 +837,6 @@
     "modified": "Resized and converted to WebP"
   },
   {
-    "player": "Xavi",
-    "file": "player-047.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Alineaci%C3%B3nFCBarcelona2008.JPG",
-    "author": "Elemaki",
-    "license": "CC BY 3.0",
-    "license_url": "https://creativecommons.org/licenses/by/3.0",
-    "modified": "Resized and converted to WebP"
-  },
-  {
     "player": "Luis Suárez (footballer, born 1987)",
     "file": "player-051.webp",
     "source": "https://commons.wikimedia.org/wiki/File:2007-07-01URU_vs_SPA213.jpg",
@@ -855,30 +846,12 @@
     "modified": "Resized and converted to WebP"
   },
   {
-    "player": "Roberto Carlos (footballer)",
-    "file": "player-060.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:25th_Laureus_World_Sports_Awards_-_Red_Carpet_-_Roberto_Carlos_-_240422_192822.jpg",
-    "author": "Barcex",
-    "license": "CC BY-SA 4.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-    "modified": "Resized and converted to WebP"
-  },
-  {
     "player": "Kim Min-jae",
     "file": "player-076.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Allianz_Arena_(25-11-2023)_09.jpg",
     "author": "SonoGrazy",
     "license": "CC BY-SA 4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-    "modified": "Resized and converted to WebP"
-  },
-  {
-    "player": "Michel Platini",
-    "file": "player-078.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:1978_FIFA_World_Cup_-_Italy_v_France_-_Michel_Platini.jpg",
-    "author": "Original:  Organizing committee of Argentina 1978 World Cup - Argentine Football Association and FIFA / Derivative work:  Danyele / Restoration:  Skblzz1",
-    "license": "Public domain",
-    "license_url": "",
     "modified": "Resized and converted to WebP"
   },
   {
@@ -897,6 +870,33 @@
     "author": "Bryan Berlin",
     "license": "CC BY-SA 4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "modified": "Resized and converted to WebP"
+  },
+  {
+    "player": "Xavi",
+    "file": "player-047.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Xavi_Hern%C3%A1ndez_-_002_(cropped).jpg",
+    "author": "Mutari 15:45, 5 March 2008 (UTC)",
+    "license": "Public domain",
+    "license_url": "",
+    "modified": "Resized and converted to WebP"
+  },
+  {
+    "player": "Roberto Carlos (footballer)",
+    "file": "player-060.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Roberto_Carlos_2011.jpg",
+    "author": "Майоров Владимир",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "modified": "Resized and converted to WebP"
+  },
+  {
+    "player": "Michel Platini",
+    "file": "player-078.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:AM_100_dram_Ag_2011_Football_Platini_b.PNG",
+    "author": "Central Bank of Armenia",
+    "license": "Public domain",
+    "license_url": "",
     "modified": "Resized and converted to WebP"
   }
 ]
