@@ -152,10 +152,21 @@ for title,filename in PLAYERS.items():
     license_name=get("LicenseShortName");license_url=get("LicenseUrl")
     if not (re.search(r"CC BY(?:-SA)?(?: [234]\.0|-[234]\.0| 4\.0|-4\.0)?",license_name,re.I) or "public domain" in license_name.lower() or license_name.upper() in ("CC0","CC ZERO")):
      raise ValueError("License not in allowed list: "+license_name)
-    if title in ("Rodri (footballer, born 1996)","Julián Álvarez (footballer)"):\n     label=candidate.lower()\n     if any(word in label for word in (" and "," vs "," versus "," with "," team "," group "," squad "," haaland "," montes ")):\n      raise ValueError("Possible multi-person image")\n    source=item.get("thumburl") or item.get("url")
+    if title in ("Rodri (footballer, born 1996)","Julián Álvarez (footballer)"):
+     label=candidate.lower()
+     if any(word in label for word in (" and "," vs "," versus "," with "," team "," group "," squad "," haaland "," montes ")):
+      raise ValueError("Possible multi-person image")
+    source=item.get("thumburl") or item.get("url")
     req=urllib.request.Request(source,headers=HEADERS)
     with urllib.request.urlopen(req,timeout=45) as r:raw=r.read()
-    pic=Image.open(io.BytesIO(raw)).convert("RGB")\n    if title in ("Rodri (footballer, born 1996)","Julián Álvarez (footballer)"):\n     import cv2, numpy as np\n     rgb=np.array(pic)\n     gray=cv2.cvtColor(rgb,cv2.COLOR_RGB2GRAY)\n     cascade=cv2.CascadeClassifier(cv2.data.haarcascades+"haarcascade_frontalface_default.xml")\n     faces=cascade.detectMultiScale(gray,scaleFactor=1.1,minNeighbors=4,minSize=(35,35))\n     if len(faces)!=1:raise ValueError("Portrait requires exactly one detectable face; found "+str(len(faces)))
+    pic=Image.open(io.BytesIO(raw)).convert("RGB")
+    if title in ("Rodri (footballer, born 1996)","Julián Álvarez (footballer)"):
+     import cv2, numpy as np
+     rgb=np.array(pic)
+     gray=cv2.cvtColor(rgb,cv2.COLOR_RGB2GRAY)
+     cascade=cv2.CascadeClassifier(cv2.data.haarcascades+"haarcascade_frontalface_default.xml")
+     faces=cascade.detectMultiScale(gray,scaleFactor=1.1,minNeighbors=4,minSize=(35,35))
+     if len(faces)!=1:raise ValueError("Portrait requires exactly one detectable face; found "+str(len(faces)))
     pic.thumbnail((900,1000))
     pic.save(OUT/filename,"WEBP",quality=83,method=5)
     credits=[c for c in credits if c.get("file")!=filename]
@@ -168,5 +179,6 @@ for title,filename in PLAYERS.items():
   print("SAVED",title,filename)
  except Exception as e:print("SKIPPED",title,str(e))
  time.sleep(1)
-(ROOT/"images"/"players"/"credits.json").write_text(json.dumps(credits,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+(ROOT/"images"/"players"/"credits.json").write_text(json.dumps(credits,ensure_ascii=False,indent=2)+"
+",encoding="utf-8")
 print("TOTAL",len(credits))
