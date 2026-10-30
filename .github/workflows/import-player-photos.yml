@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install 'Pillow>=10,<13'
+      - run: python -m pip install 'Pillow>=10,<13' 'opencv-python-headless>=4.10,<5' 'numpy>=1.26,<3'
       - run: python scripts/download_player_photos.py
       - name: Commit image assets and credits
         run: |
