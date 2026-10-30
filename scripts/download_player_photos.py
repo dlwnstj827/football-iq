@@ -113,6 +113,24 @@ def api(base,params):
  req=urllib.request.Request(url,headers=HEADERS)
  with urllib.request.urlopen(req,timeout=30) as r:return json.load(r)
 def strip(value):return re.sub(r"<[^>]+>","",html.unescape(value or "")).strip()
+# Alternative Wikimedia Commons search queries for players whose lead photo failed.
+ALTERNATES={
+ "Rodri (footballer, born 1996)":"Rodri Manchester City football",
+ "Julián Álvarez (footballer)":"Julián Álvarez Argentina football",
+ "Xavi":"Xavi Hernández Barcelona football",
+ "Luis Suárez (footballer, born 1987)":"Luis Suárez Uruguay football",
+ "Roberto Carlos (footballer)":"Roberto Carlos Brazil football",
+ "Kim Min-jae":"Kim Min-jae Bayern football",
+ "Michel Platini":"Michel Platini France football"
+}
+def photo_candidates(title,lead):
+ if lead:yield lead
+ if title not in ALTERNATES:return
+ result=api("https://commons.wikimedia.org/w/api.php",{"action":"query","generator":"search","gsrsearch":"filetype:bitmap "+ALTERNATES[title],"gsrnamespace":6,"gsrlimit":30,"format":"json"})
+ for entry in result.get("query",{}).get("pages",{}).values():
+  name=entry.get("title","")
+  if name.startswith("File:"):yield name[5:]
+
 credits_path=OUT/"credits.json"
 credits=json.loads(credits_path.read_text(encoding="utf-8")) if credits_path.exists() else []
 for title,filename in PLAYERS.items():
@@ -123,23 +141,30 @@ for title,filename in PLAYERS.items():
   page=api("https://en.wikipedia.org/w/api.php",{"action":"query","titles":title,"prop":"pageimages","format":"json","piprop":"name"})
   entry=next(iter(page["query"]["pages"].values()))
   image=entry.get("pageimage")
-  if not image:raise ValueError("No lead image")
-  info=api("https://commons.wikimedia.org/w/api.php",{"action":"query","titles":"File:"+image,"prop":"imageinfo","iiprop":"url|extmetadata","iiurlwidth":"900","format":"json"})
-  entry=next(iter(info["query"]["pages"].values()))
-  if "imageinfo" not in entry:raise ValueError("Image not hosted on Commons")
-  item=entry["imageinfo"][0];meta=item.get("extmetadata",{})
-  get=lambda k:strip(meta.get(k,{}).get("value",""))
-  license_name=get("LicenseShortName");license_url=get("LicenseUrl")
-  if not (re.search(r"CC BY(?:-SA)?(?: [234]\.0|-[234]\.0| 4\.0|-4\.0)?",license_name,re.I) or "public domain" in license_name.lower() or license_name.upper() in ("CC0","CC ZERO")):
-   raise ValueError("License not in allowed list: "+license_name)
-  source=item.get("thumburl") or item.get("url")
-  req=urllib.request.Request(source,headers=HEADERS)
-  with urllib.request.urlopen(req,timeout=45) as r:raw=r.read()
-  pic=Image.open(io.BytesIO(raw)).convert("RGB")
-  pic.thumbnail((900,1000))
-  pic.save(OUT/filename,"WEBP",quality=83,method=5)
-  credits=[c for c in credits if c.get("file")!=filename]
-  credits.append({"player":title,"file":filename,"source":item.get("descriptionurl"),"author":get("Artist"),"license":license_name,"license_url":license_url,"modified":"Resized and converted to WebP"})
+  saved=False
+  for candidate in photo_candidates(title,image):
+   try:
+    info=api("https://commons.wikimedia.org/w/api.php",{"action":"query","titles":"File:"+candidate,"prop":"imageinfo","iiprop":"url|extmetadata","iiurlwidth":"900","format":"json"})
+    entry=next(iter(info["query"]["pages"].values()))
+    if "imageinfo" not in entry:raise ValueError("Image not hosted on Commons")
+    item=entry["imageinfo"][0];meta=item.get("extmetadata",{})
+    get=lambda k:strip(meta.get(k,{}).get("value",""))
+    license_name=get("LicenseShortName");license_url=get("LicenseUrl")
+    if not (re.search(r"CC BY(?:-SA)?(?: [234]\.0|-[234]\.0| 4\.0|-4\.0)?",license_name,re.I) or "public domain" in license_name.lower() or license_name.upper() in ("CC0","CC ZERO")):
+     raise ValueError("License not in allowed list: "+license_name)
+    source=item.get("thumburl") or item.get("url")
+    req=urllib.request.Request(source,headers=HEADERS)
+    with urllib.request.urlopen(req,timeout=45) as r:raw=r.read()
+    pic=Image.open(io.BytesIO(raw)).convert("RGB")
+    pic.thumbnail((900,1000))
+    pic.save(OUT/filename,"WEBP",quality=83,method=5)
+    credits=[c for c in credits if c.get("file")!=filename]
+    credits.append({"player":title,"file":filename,"source":item.get("descriptionurl"),"author":get("Artist"),"license":license_name,"license_url":license_url,"modified":"Resized and converted to WebP"})
+    saved=True
+    break
+   except Exception as error:
+    print("CANDIDATE FAILED",title,candidate,str(error))
+  if not saved:raise ValueError("No licensed Commons photo found")
   print("SAVED",title,filename)
  except Exception as e:print("SKIPPED",title,str(e))
  time.sleep(1)
