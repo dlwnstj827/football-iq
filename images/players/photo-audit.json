@@ -1,0 +1,668 @@
+{
+  "method": "OpenCV Haar frontal face detection; false positives and missed profiles possible; manual visual verification still required",
+  "total": 100,
+  "flagged": [
+    {
+      "player": "Mohamed Salah",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Andrea Pirlo",
+      "faces": 0,
+      "status": "review"
+    },
+    {
+      "player": "Lamine Yamal",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Bernardo Silva",
+      "faces": 3,
+      "status": "review"
+    },
+    {
+      "player": "Florian Wirtz",
+      "faces": 3,
+      "status": "review"
+    },
+    {
+      "player": "Lautaro Martínez",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Gianluigi Donnarumma",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Pelé",
+      "faces": 4,
+      "status": "review"
+    },
+    {
+      "player": "Diego Maradona",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Franz Beckenbauer",
+      "faces": 3,
+      "status": "review"
+    },
+    {
+      "player": "Carles Puyol",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Toni Kroos",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Gianluigi Buffon",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Samuel Eto'o",
+      "faces": 0,
+      "status": "review"
+    },
+    {
+      "player": "Virgil van Dijk",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Alisson Becker",
+      "faces": 3,
+      "status": "review"
+    },
+    {
+      "player": "Thibaut Courtois",
+      "faces": 3,
+      "status": "review"
+    },
+    {
+      "player": "Alexis Mac Allister",
+      "faces": 4,
+      "status": "review"
+    },
+    {
+      "player": "Ousmane Dembélé",
+      "faces": 0,
+      "status": "review"
+    },
+    {
+      "player": "Marquinhos",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Manuel Neuer",
+      "faces": 3,
+      "status": "review"
+    },
+    {
+      "player": "Lee Kang-in",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Ruud Gullit",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Alessandro Del Piero",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Bastian Schweinsteiger",
+      "faces": 3,
+      "status": "review"
+    },
+    {
+      "player": "Mesut Özil",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Yaya Touré",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "David Villa",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Xavi",
+      "faces": 0,
+      "status": "review"
+    },
+    {
+      "player": "Roberto Carlos (footballer)",
+      "faces": 6,
+      "status": "review"
+    },
+    {
+      "player": "Kim Min-jae",
+      "faces": 3,
+      "status": "review"
+    },
+    {
+      "player": "Michel Platini",
+      "faces": 2,
+      "status": "review"
+    }
+  ],
+  "results": [
+    {
+      "player": "Lionel Messi",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Cristiano Ronaldo",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Kylian Mbappé",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Erling Haaland",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Son Heung-min",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Mohamed Salah",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Harry Kane",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Jude Bellingham",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Kevin De Bruyne",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Zinedine Zidane",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Vinícius Júnior",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Ronaldinho",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Ronaldo (Brazilian footballer)",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "David Beckham",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Andrea Pirlo",
+      "faces": 0,
+      "status": "review"
+    },
+    {
+      "player": "Kaká",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Thierry Henry",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Steven Gerrard",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Frank Lampard",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Wayne Rooney",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Lamine Yamal",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Pedri",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Gavi (footballer)",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Raphinha",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Robert Lewandowski",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Bukayo Saka",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Declan Rice",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Martin Ødegaard",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Phil Foden",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Bernardo Silva",
+      "faces": 3,
+      "status": "review"
+    },
+    {
+      "player": "Florian Wirtz",
+      "faces": 3,
+      "status": "review"
+    },
+    {
+      "player": "Jamal Musiala",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Cole Palmer",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Viktor Gyökeres",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Lautaro Martínez",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Federico Valverde",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Trent Alexander-Arnold",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Gianluigi Donnarumma",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Pelé",
+      "faces": 4,
+      "status": "review"
+    },
+    {
+      "player": "Diego Maradona",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Johan Cruyff",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Franz Beckenbauer",
+      "faces": 3,
+      "status": "review"
+    },
+    {
+      "player": "Paolo Maldini",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Andrés Iniesta",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Carles Puyol",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Sergio Agüero",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Zlatan Ibrahimović",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Neymar",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Gareth Bale",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Luka Modrić",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Toni Kroos",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Iker Casillas",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Gianluigi Buffon",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Didier Drogba",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Samuel Eto'o",
+      "faces": 0,
+      "status": "review"
+    },
+    {
+      "player": "Achraf Hakimi",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Virgil van Dijk",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Alisson Becker",
+      "faces": 3,
+      "status": "review"
+    },
+    {
+      "player": "Thibaut Courtois",
+      "faces": 3,
+      "status": "review"
+    },
+    {
+      "player": "William Saliba",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Rúben Dias",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Nicolò Barella",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Enzo Fernández",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Alexis Mac Allister",
+      "faces": 4,
+      "status": "review"
+    },
+    {
+      "player": "Victor Osimhen",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Ousmane Dembélé",
+      "faces": 0,
+      "status": "review"
+    },
+    {
+      "player": "Bradley Barcola",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Désiré Doué",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Marquinhos",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Manuel Neuer",
+      "faces": 3,
+      "status": "review"
+    },
+    {
+      "player": "Lee Kang-in",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Ruud Gullit",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Marco van Basten",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Alessandro Del Piero",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Francesco Totti",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Gabriel Batistuta",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Miroslav Klose",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Bastian Schweinsteiger",
+      "faces": 3,
+      "status": "review"
+    },
+    {
+      "player": "Arjen Robben",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Franck Ribéry",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Eden Hazard",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Mesut Özil",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "David Silva",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Yaya Touré",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Clarence Seedorf",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Nemanja Vidić",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Rio Ferdinand",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "John Terry",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Ashley Cole",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Philipp Lahm",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Javier Mascherano",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Fernando Torres",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "David Villa",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Xavi",
+      "faces": 0,
+      "status": "review"
+    },
+    {
+      "player": "Luis Suárez (footballer, born 1987)",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Roberto Carlos (footballer)",
+      "faces": 6,
+      "status": "review"
+    },
+    {
+      "player": "Kim Min-jae",
+      "faces": 3,
+      "status": "review"
+    },
+    {
+      "player": "Michel Platini",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Rodri (footballer, born 1996)",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Julián Álvarez (footballer)",
+      "faces": 1,
+      "status": "one_face_detected"
+    }
+  ]
+}

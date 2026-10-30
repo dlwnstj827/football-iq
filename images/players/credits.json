@@ -837,24 +837,6 @@
     "modified": "Resized and converted to WebP"
   },
   {
-    "player": "Rodri (footballer, born 1996)",
-    "file": "player-031.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Haaland_and_Rodri_warm_up_2022.jpeg",
-    "author": "Egghead06",
-    "license": "CC BY-SA 4.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-    "modified": "Resized and converted to WebP"
-  },
-  {
-    "player": "Julián Álvarez (footballer)",
-    "file": "player-037.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Arg_vs_mex_julian_alvarez_vs_cesar_montes.jpg",
-    "author": "Hossein Zohrevand",
-    "license": "CC BY 4.0",
-    "license_url": "https://creativecommons.org/licenses/by/4.0",
-    "modified": "Resized and converted to WebP"
-  },
-  {
     "player": "Xavi",
     "file": "player-047.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Alineaci%C3%B3nFCBarcelona2008.JPG",
@@ -897,6 +879,24 @@
     "author": "Original:  Organizing committee of Argentina 1978 World Cup - Argentine Football Association and FIFA / Derivative work:  Danyele / Restoration:  Skblzz1",
     "license": "Public domain",
     "license_url": "",
+    "modified": "Resized and converted to WebP"
+  },
+  {
+    "player": "Rodri (footballer, born 1996)",
+    "file": "player-031.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Manchester_City_2025_06_26_Juventus_(Omar_Marmoush).jpg",
+    "author": "Equipos de fútbol",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "modified": "Resized and converted to WebP"
+  },
+  {
+    "player": "Julián Álvarez (footballer)",
+    "file": "player-037.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Enzo_Fernandez_Julian_Alvarez_Argentina_v_Egypt_7_July_2026-116.jpg",
+    "author": "Bryan Berlin",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
     "modified": "Resized and converted to WebP"
   }
 ]
