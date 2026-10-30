@@ -24,5 +24,7 @@ jobs:
           git add images/players/
           if ! git diff --cached --quiet; then
             git commit -m "Import licensed local player images and credits"
-            git push
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
           fi
