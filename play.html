@@ -110,4 +110,4 @@ $("form").onsubmit=e=>{e.preventDefault();if(locked||$("answer").disabled)return
 $("skip").onclick=()=>{if(!$("answer").disabled&&!locked)judge(false,"정답: "+questions[index].n)};
 function finish(){clearInterval(interval);$("resultOverlay").classList.add("hidden");show("results");$("finalScore").textContent="10문제 중 "+score+"문제 정답";$("finalDesc").textContent="정답 "+score+"개 · 오답 "+missed.length+"개"+(skipped?" · 사진 오류로 건너뜀 "+skipped+"개":"");$("missed").replaceChildren(...(missed.length?missed.map(n=>{const li=document.createElement("li");li.textContent=n;return li}):[Object.assign(document.createElement("li"),{textContent:"틀린 문제가 없어! 🎉"})]))}
 $("start").onclick=begin;$("again").onclick=()=>{show("setup")};
-</script></body></html>
+</script><div style="text-align:center;padding:0 16px 25px;font-size:12px"><a href="./photo-credits.html" style="color:#b0c1b4;text-decoration:underline">선수 사진 출처 및 라이선스</a></div></body></html>
