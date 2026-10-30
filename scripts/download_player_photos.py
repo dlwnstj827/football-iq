@@ -154,6 +154,8 @@ for title,filename in PLAYERS.items():
      raise ValueError("License not in allowed list: "+license_name)
     if title in ("Rodri (footballer, born 1996)","Julián Álvarez (footballer)"):
      label=candidate.lower()
+     required=("rodri",) if title.startswith("Rodri") else ("alvarez","álvarez","julian","julián")
+     if not any(word in label for word in required):raise ValueError("Filename does not identify target player")
      if any(word in label for word in (" and "," vs "," versus "," with "," team "," group "," squad "," haaland "," montes ")):
       raise ValueError("Possible multi-person image")
     source=item.get("thumburl") or item.get("url")
