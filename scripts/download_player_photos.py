@@ -121,7 +121,8 @@ ALTERNATES={
  "Luis Suárez (footballer, born 1987)":"Luis Suárez Uruguay football",
  "Roberto Carlos (footballer)":"Roberto Carlos Brazil football",
  "Kim Min-jae":"Kim Min-jae Bayern football",
- "Michel Platini":"Michel Platini France football"
+ "Michel Platini":"Michel Platini France football",
+ "Diego Maradona":"Diego Maradona Argentina portrait"
 }
 def photo_candidates(title,lead):
  if lead:yield lead
@@ -131,10 +132,17 @@ def photo_candidates(title,lead):
   name=entry.get("title","")
   if name.startswith("File:"):yield name[5:]
 
+REPLACE_PHOTOS={
+ "Diego Maradona":("maradona",),
+ "Xavi":("xavi","hernandez","hernández"),
+ "Roberto Carlos (footballer)":("roberto carlos","roberto_carlos","roberto-carlos"),
+ "Kim Min-jae":("kim min","kim_min","kim-min","min-jae","min_jae","minjae"),
+ "Michel Platini":("platini",)
+}
 credits_path=OUT/"credits.json"
 credits=json.loads(credits_path.read_text(encoding="utf-8")) if credits_path.exists() else []
 for title,filename in PLAYERS.items():
- if title not in ("Rodri (footballer, born 1996)","Julián Álvarez (footballer)") and (OUT/filename).exists() and any(c.get("file")==filename for c in credits):
+ if title not in REPLACE_PHOTOS and (OUT/filename).exists() and any(c.get("file")==filename for c in credits):
   print("EXISTS",title)
   continue
  try:
@@ -142,7 +150,7 @@ for title,filename in PLAYERS.items():
   entry=next(iter(page["query"]["pages"].values()))
   image=entry.get("pageimage")
   saved=False
-  for candidate in photo_candidates(title,None if title in ("Rodri (footballer, born 1996)","Julián Álvarez (footballer)") else image):
+  for candidate in photo_candidates(title,None if title in REPLACE_PHOTOS else image):
    try:
     info=api("https://commons.wikimedia.org/w/api.php",{"action":"query","titles":"File:"+candidate,"prop":"imageinfo","iiprop":"url|extmetadata","iiurlwidth":"900","format":"json"})
     entry=next(iter(info["query"]["pages"].values()))
@@ -152,9 +160,9 @@ for title,filename in PLAYERS.items():
     license_name=get("LicenseShortName");license_url=get("LicenseUrl")
     if not (re.search(r"CC BY(?:-SA)?(?: [234]\.0|-[234]\.0| 4\.0|-4\.0)?",license_name,re.I) or "public domain" in license_name.lower() or license_name.upper() in ("CC0","CC ZERO")):
      raise ValueError("License not in allowed list: "+license_name)
-    if title in ("Rodri (footballer, born 1996)","Julián Álvarez (footballer)"):
+    if title in REPLACE_PHOTOS:
      label=candidate.lower()
-     required=("rodri",) if title.startswith("Rodri") else ("alvarez","álvarez","julian","julián")
+     required=REPLACE_PHOTOS[title]
      if not any(word in label for word in required):raise ValueError("Filename does not identify target player")
      if any(word in label for word in (" and "," vs "," versus "," with "," team "," group "," squad "," haaland "," montes ")):
       raise ValueError("Possible multi-person image")
@@ -162,7 +170,7 @@ for title,filename in PLAYERS.items():
     req=urllib.request.Request(source,headers=HEADERS)
     with urllib.request.urlopen(req,timeout=45) as r:raw=r.read()
     pic=Image.open(io.BytesIO(raw)).convert("RGB")
-    if title in ("Rodri (footballer, born 1996)","Julián Álvarez (footballer)"):
+    if title in REPLACE_PHOTOS:
      import cv2, numpy as np
      rgb=np.array(pic)
      gray=cv2.cvtColor(rgb,cv2.COLOR_RGB2GRAY)
