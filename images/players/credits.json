@@ -1,0 +1,92 @@
+[
+  {
+    "player": "Lionel Messi",
+    "file": "messi.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Leo_Messi_Argentina_v_Egypt_7_July_2026-1.jpg",
+    "author": "Bryan Berlin",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "modified": "Resized and converted to WebP"
+  },
+  {
+    "player": "Cristiano Ronaldo",
+    "file": "cristiano-ronaldo.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Cristiano_Ronaldo_Croatia_v_Portugal_2_July_2026-075_(cropped).jpg",
+    "author": "Bryan Berlin",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "modified": "Resized and converted to WebP"
+  },
+  {
+    "player": "Kylian Mbappé",
+    "file": "mbappe.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Kylian_Mbappe_France_v_Senegal_16_June_2026-391_(cropped).jpg",
+    "author": "Bryan Berlin",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "modified": "Resized and converted to WebP"
+  },
+  {
+    "player": "Erling Haaland",
+    "file": "haaland.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Erling_Haaland_Morocco_v_Norway_7_June_2026-51.jpg",
+    "author": "Bryan Berlin",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "modified": "Resized and converted to WebP"
+  },
+  {
+    "player": "Son Heung-min",
+    "file": "son-heung-min.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:BFA_2023_-2_Heung-Min_Son_(cropped).jpg",
+    "author": "Ujishadow",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "modified": "Resized and converted to WebP"
+  },
+  {
+    "player": "Mohamed Salah",
+    "file": "salah.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Mohamed_Salah_Argentina_v_Egypt_7_July_2026-163_(cropped).jpg",
+    "author": "Bryan Berlin",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "modified": "Resized and converted to WebP"
+  },
+  {
+    "player": "Harry Kane",
+    "file": "harry-kane.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Harry_Kane_England_v_Ghana_23_June_2026-024_(cropped).jpg",
+    "author": "Bryan Berlin",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "modified": "Resized and converted to WebP"
+  },
+  {
+    "player": "Jude Bellingham",
+    "file": "bellingham.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Jude_Bellingham_England_v_Ghana_23_June_2026-061_(cropped).jpg",
+    "author": "Bryan Berlin",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "modified": "Resized and converted to WebP"
+  },
+  {
+    "player": "Kevin De Bruyne",
+    "file": "de-bruyne.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Kevin_De_Bruyne_USMNT_v_Belgium_Mar_28_2026-64_(cropped).jpg",
+    "author": "Bryan Berlin",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "modified": "Resized and converted to WebP"
+  },
+  {
+    "player": "Zinedine Zidane",
+    "file": "zidane.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Zinedine_Zidane_by_Tasnim_03.jpg",
+    "author": "Hadi Abyar",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "modified": "Resized and converted to WebP"
+  }
+]
