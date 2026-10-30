@@ -13,8 +13,36 @@ function show(id){["setup","quiz","results"].forEach(x=>$(x).classList.toggle("h
 function norm(s){return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f\s.\-_'’]/g,"")}
 function shuffle(a){for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function begin(){clearTimeout(advanceTimeout);$("resultOverlay").classList.add("hidden");const roster=shuffle(players.filter(p=>pool==="all"||p.pool===pool).slice());questions=roster.slice(0,10);spares=roster.slice(10);index=0;score=0;missed=[];skipped=0;$("score").textContent="0";show("quiz");next()}
+// Local-first pilot: serve reviewed images from /images/players when available.
+// Until an image is uploaded and its license documented, Wikipedia remains the fallback.
+const localPhotoPaths={
+ "Lionel Messi":"messi.webp",
+ "Cristiano Ronaldo":"cristiano-ronaldo.webp",
+ "Kylian Mbappé":"mbappe.webp",
+ "Erling Haaland":"haaland.webp",
+ "Son Heung-min":"son-heung-min.webp",
+ "Mohamed Salah":"salah.webp",
+ "Harry Kane":"harry-kane.webp",
+ "Jude Bellingham":"bellingham.webp",
+ "Kevin De Bruyne":"de-bruyne.webp",
+ "Zinedine Zidane":"zidane.webp"
+};
+async function tryLocalPhoto(p){
+ const filename=localPhotoPaths[p.wiki];
+ if(!filename)return null;
+ const url="./images/players/"+filename;
+ try{
+  const response=await fetch(url,{method:"HEAD",cache:"default"});
+  if(!response.ok||!response.headers.get("content-type")?.startsWith("image/"))return null;
+  const img=new Image();
+  await new Promise((resolve,reject)=>{const timeout=setTimeout(()=>reject(Error("local image timeout")),4000);img.onload=()=>{clearTimeout(timeout);resolve()};img.onerror=()=>{clearTimeout(timeout);reject(Error("local image error"))};img.src=url});
+  return url;
+ }catch{return null}
+}
 async function fetchPhoto(p){
  if(photoCache.has(p.wiki))return photoCache.get(p.wiki);
+ const local=await tryLocalPhoto(p);
+ if(local){photoCache.set(p.wiki,local);return local;}
  const url="https://en.wikipedia.org/w/api.php?action=query&titles="+encodeURIComponent(p.wiki)+"&prop=pageimages&format=json&piprop=thumbnail%7Coriginal&pithumbsize=700&origin=*";
  let sources=[];
  for(let attempt=0;attempt<2;attempt++){
