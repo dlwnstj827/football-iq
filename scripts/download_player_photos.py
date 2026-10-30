@@ -134,7 +134,7 @@ def photo_candidates(title,lead):
 credits_path=OUT/"credits.json"
 credits=json.loads(credits_path.read_text(encoding="utf-8")) if credits_path.exists() else []
 for title,filename in PLAYERS.items():
- if (OUT/filename).exists() and any(c.get("file")==filename for c in credits):
+ if title not in ("Rodri (footballer, born 1996)","Julián Álvarez (footballer)") and (OUT/filename).exists() and any(c.get("file")==filename for c in credits):
   print("EXISTS",title)
   continue
  try:
@@ -142,7 +142,7 @@ for title,filename in PLAYERS.items():
   entry=next(iter(page["query"]["pages"].values()))
   image=entry.get("pageimage")
   saved=False
-  for candidate in photo_candidates(title,image):
+  for candidate in photo_candidates(title,None if title in ("Rodri (footballer, born 1996)","Julián Álvarez (footballer)") else image):
    try:
     info=api("https://commons.wikimedia.org/w/api.php",{"action":"query","titles":"File:"+candidate,"prop":"imageinfo","iiprop":"url|extmetadata","iiurlwidth":"900","format":"json"})
     entry=next(iter(info["query"]["pages"].values()))
@@ -152,10 +152,10 @@ for title,filename in PLAYERS.items():
     license_name=get("LicenseShortName");license_url=get("LicenseUrl")
     if not (re.search(r"CC BY(?:-SA)?(?: [234]\.0|-[234]\.0| 4\.0|-4\.0)?",license_name,re.I) or "public domain" in license_name.lower() or license_name.upper() in ("CC0","CC ZERO")):
      raise ValueError("License not in allowed list: "+license_name)
-    source=item.get("thumburl") or item.get("url")
+    if title in ("Rodri (footballer, born 1996)","Julián Álvarez (footballer)"):\n     label=candidate.lower()\n     if any(word in label for word in (" and "," vs "," versus "," with "," team "," group "," squad "," haaland "," montes ")):\n      raise ValueError("Possible multi-person image")\n    source=item.get("thumburl") or item.get("url")
     req=urllib.request.Request(source,headers=HEADERS)
     with urllib.request.urlopen(req,timeout=45) as r:raw=r.read()
-    pic=Image.open(io.BytesIO(raw)).convert("RGB")
+    pic=Image.open(io.BytesIO(raw)).convert("RGB")\n    if title in ("Rodri (footballer, born 1996)","Julián Álvarez (footballer)"):\n     import cv2, numpy as np\n     rgb=np.array(pic)\n     gray=cv2.cvtColor(rgb,cv2.COLOR_RGB2GRAY)\n     cascade=cv2.CascadeClassifier(cv2.data.haarcascades+"haarcascade_frontalface_default.xml")\n     faces=cascade.detectMultiScale(gray,scaleFactor=1.1,minNeighbors=4,minSize=(35,35))\n     if len(faces)!=1:raise ValueError("Portrait requires exactly one detectable face; found "+str(len(faces)))
     pic.thumbnail((900,1000))
     pic.save(OUT/filename,"WEBP",quality=83,method=5)
     credits=[c for c in credits if c.get("file")!=filename]
@@ -164,7 +164,7 @@ for title,filename in PLAYERS.items():
     break
    except Exception as error:
     print("CANDIDATE FAILED",title,candidate,str(error))
-  if not saved:raise ValueError("No licensed Commons photo found")
+  if not saved:raise ValueError("No verified single-face Commons photo found")
   print("SAVED",title,filename)
  except Exception as e:print("SKIPPED",title,str(e))
  time.sleep(1)
