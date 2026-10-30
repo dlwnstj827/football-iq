@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'scripts/download_player_photos.py'
+      - 'scripts/audit_player_photos.py'
       - '.github/workflows/import-player-photos.yml'
 permissions:
   contents: write
@@ -17,6 +18,7 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install 'Pillow>=10,<13' 'opencv-python-headless>=4.10,<5' 'numpy>=1.26,<3'
       - run: python scripts/download_player_photos.py
+      - run: python scripts/audit_player_photos.py
       - name: Commit image assets and credits
         run: |
           git config user.name "github-actions[bot]"
