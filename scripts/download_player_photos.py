@@ -179,6 +179,5 @@ for title,filename in PLAYERS.items():
   print("SAVED",title,filename)
  except Exception as e:print("SKIPPED",title,str(e))
  time.sleep(1)
-(ROOT/"images"/"players"/"credits.json").write_text(json.dumps(credits,ensure_ascii=False,indent=2)+"
-",encoding="utf-8")
+(ROOT/"images"/"players"/"credits.json").write_text(json.dumps(credits,ensure_ascii=False,indent=2)+chr(10),encoding="utf-8")
 print("TOTAL",len(credits))
