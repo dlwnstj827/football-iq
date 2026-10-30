@@ -30,7 +30,7 @@ for title,filename in PLAYERS.items():
   item=entry["imageinfo"][0];meta=item.get("extmetadata",{})
   get=lambda k:strip(meta.get(k,{}).get("value",""))
   license_name=get("LicenseShortName");license_url=get("LicenseUrl")
-  if not (re.search(r"CC BY(?:-SA)?(?: [234]\\.0|-[234]\\.0| 4\\.0|-4\\.0)?",license_name,re.I) or "public domain" in license_name.lower() or license_name.upper() in ("CC0","CC ZERO")):
+  if not (re.search(r"CC BY(?:-SA)?(?: [234]\.0|-[234]\.0| 4\.0|-4\.0)?",license_name,re.I) or "public domain" in license_name.lower() or license_name.upper() in ("CC0","CC ZERO")):
    raise ValueError("License not in allowed list: "+license_name)
   source=item.get("thumburl") or item.get("url")
   req=urllib.request.Request(source,headers=HEADERS)
@@ -42,5 +42,5 @@ for title,filename in PLAYERS.items():
   print("SAVED",title,filename)
  except Exception as e:print("SKIPPED",title,str(e))
  time.sleep(1)
-(ROOT/"images"/"players"/"credits.json").write_text(json.dumps(credits,ensure_ascii=False,indent=2)+"\\n",encoding="utf-8")
+(ROOT/"images"/"players"/"credits.json").write_text(json.dumps(credits,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 print("TOTAL",len(credits))
