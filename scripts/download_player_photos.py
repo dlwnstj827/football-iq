@@ -111,13 +111,10 @@ PLAYERS={
  "Marcos Llorente": "player-103.webp",
  "Dávid Hancko": "player-104.webp",
  "Cristian Romero (footballer, born 1998)": "player-105.webp",
- "Robin Le Normand": "player-106.webp",
  "Marc Pubill": "player-107.webp",
  "Johnny Cardoso": "player-108.webp",
  "Koke (footballer, born 1992)": "player-109.webp",
- "Pablo Barrios (footballer)": "player-110.webp",
  "Álex Baena": "player-111.webp",
- "Ademola Lookman": "player-112.webp",
  "Giuliano Simeone": "player-113.webp",
  "Alejandro Grimaldo": "player-114.webp",
  "Morten Hjulmand": "player-115.webp",
@@ -145,13 +142,10 @@ ALTERNATES={
  "Marcos Llorente": "Marcos Llorente football portrait",
  "Dávid Hancko": "David Hancko football portrait",
  "Cristian Romero (footballer, born 1998)": "Cristian Romero Argentina portrait",
- "Robin Le Normand": "Robin Le Normand Spain portrait",
  "Marc Pubill": "Marc Pubill football portrait",
  "Johnny Cardoso": "Johnny Cardoso football portrait",
  "Koke (footballer, born 1992)": "Koke Atletico Madrid football portrait",
- "Pablo Barrios (footballer)": "Pablo Barrios Atletico Madrid",
  "Álex Baena": "Alex Baena football portrait",
- "Ademola Lookman": "Ademola Lookman Atalanta portrait",
  "Giuliano Simeone": "Giuliano Simeone football portrait",
  "Alejandro Grimaldo": "Alejandro Grimaldo Bayer Leverkusen",
  "Morten Hjulmand": "Morten Hjulmand Sporting Portugal",
@@ -173,19 +167,13 @@ REPLACE_PHOTOS={
  "Kim Min-jae":("kim min","kim_min","kim-min","min-jae","min_jae","minjae"),
  "Michel Platini":("platini",),
  "Cristian Romero (footballer, born 1998)":("romero","cuti"),
- "Robin Le Normand":("le normand","le_normand","le-normand"),
- "Pablo Barrios (footballer)":("pablo barrios","pablo_barrios","barrios"),
- "Ademola Lookman":("lookman",),
  "Alejandro Grimaldo":("grimaldo",),
  "Morten Hjulmand":("hjulmand",)
 }
 # Manually selected replacement candidates. Never silently reuse the rejected image.
 PREFERRED_REPLACEMENTS={
- "Robin Le Normand":["Robin Le Normand, FC Salzburg vs. Atletico Madrid (2025-01-29 UEFA Championsleague) 56 (cropped).jpg","FC Salzburg vs. Atletico Madrid (2025-01-29 UEFA Championsleague) 56 (cropped).jpg"],
- "Ademola Lookman":["Ademola Lookman, Charlton (cropped).jpg","Ademola Lookman against Derby 2.jpg"],
  "Alejandro Grimaldo":["Alex Grimaldo Argentina v Spain 19 July 2026-314 (face crop).jpg","Alex Grimaldo France v Spain 7.24.26-002.jpg"],
  "Morten Hjulmand":["Hjulmand.png","Milan Lecce 2023 Hjulmand 1.jpg"],
- "Pablo Barrios (footballer)":[]
 }
 # The only categorized Commons image for Pablo Barrios is a group pre-match photo.
 # Leave him unfilled until a licensed individual portrait is available.
