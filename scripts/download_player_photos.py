@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Download the 100-player roster from Wikimedia Commons, with attribution."""
+"""Download licensed roster photos from Wikimedia Commons, with attribution."""
 import json, re, time, urllib.parse, urllib.request, io, pathlib, html
 from PIL import Image
 ROOT=pathlib.Path(__file__).resolve().parents[1]
@@ -105,7 +105,24 @@ PLAYERS={
  "Philipp Lahm": "player-097.webp",
  "Javier Mascherano": "player-098.webp",
  "Fernando Torres": "player-099.webp",
- "David Villa": "player-100.webp"
+ "David Villa": "player-100.webp",
+ "Juan Musso": "player-101.webp",
+ "Jan Oblak": "player-102.webp",
+ "Marcos Llorente": "player-103.webp",
+ "Dávid Hancko": "player-104.webp",
+ "Cristian Romero (footballer, born 1998)": "player-105.webp",
+ "Robin Le Normand": "player-106.webp",
+ "Marc Pubill": "player-107.webp",
+ "Johnny Cardoso": "player-108.webp",
+ "Koke (footballer, born 1992)": "player-109.webp",
+ "Pablo Barrios (footballer)": "player-110.webp",
+ "Álex Baena": "player-111.webp",
+ "Ademola Lookman": "player-112.webp",
+ "Giuliano Simeone": "player-113.webp",
+ "Alejandro Grimaldo": "player-114.webp",
+ "Morten Hjulmand": "player-115.webp",
+ "Alexander Sørloth": "player-116.webp",
+ "Jonathan David": "player-117.webp"
 }
 HEADERS={"User-Agent":"FootballIQ/1.0 (educational image attribution pilot; https://github.com/dlwnstj827/football-iq)"}
 def api(base,params):
@@ -122,7 +139,24 @@ ALTERNATES={
  "Roberto Carlos (footballer)":"Roberto Carlos Brazil football",
  "Kim Min-jae":"Kim Min-jae Bayern football",
  "Michel Platini":"Michel Platini France football",
- "Diego Maradona":"Diego Maradona Argentina portrait"
+ "Diego Maradona":"Diego Maradona Argentina portrait",
+ "Juan Musso": "Juan Musso football portrait",
+ "Jan Oblak": "Jan Oblak football portrait",
+ "Marcos Llorente": "Marcos Llorente football portrait",
+ "Dávid Hancko": "David Hancko football portrait",
+ "Cristian Romero (footballer, born 1998)": "Cristian Romero football football portrait",
+ "Robin Le Normand": "Robin Le Normand football portrait",
+ "Marc Pubill": "Marc Pubill football portrait",
+ "Johnny Cardoso": "Johnny Cardoso football portrait",
+ "Koke (footballer, born 1992)": "Koke Atletico Madrid football portrait",
+ "Pablo Barrios (footballer)": "Pablo Barrios Atletico Madrid football portrait",
+ "Álex Baena": "Alex Baena football portrait",
+ "Ademola Lookman": "Ademola Lookman football portrait",
+ "Giuliano Simeone": "Giuliano Simeone football portrait",
+ "Alejandro Grimaldo": "Alejandro Grimaldo football portrait",
+ "Morten Hjulmand": "Morten Hjulmand football portrait",
+ "Alexander Sørloth": "Alexander Sorloth football portrait",
+ "Jonathan David": "Jonathan David football football portrait"
 }
 def photo_candidates(title,lead):
  if lead:yield lead
