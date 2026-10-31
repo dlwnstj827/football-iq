@@ -790,36 +790,6 @@
       "status": "review"
     },
     {
-      "player": "Xavi",
-      "faces": 1,
-      "status": "one_face_detected"
-    },
-    {
-      "player": "Roberto Carlos (footballer)",
-      "faces": 1,
-      "status": "one_face_detected"
-    },
-    {
-      "player": "Michel Platini",
-      "faces": 1,
-      "status": "one_face_detected"
-    },
-    {
-      "player": "Cristian Romero (footballer, born 1998)",
-      "faces": 1,
-      "status": "one_face_detected"
-    },
-    {
-      "player": "Alejandro Grimaldo",
-      "faces": 1,
-      "status": "one_face_detected"
-    },
-    {
-      "player": "Morten Hjulmand",
-      "faces": 1,
-      "status": "one_face_detected"
-    },
-    {
       "player": "Andriy Lunin",
       "faces": 0,
       "status": "review"
@@ -898,6 +868,36 @@
       "player": "Yan Diomande",
       "faces": 4,
       "status": "review"
+    },
+    {
+      "player": "Xavi",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Roberto Carlos (footballer)",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Michel Platini",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Cristian Romero (footballer, born 1998)",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Alejandro Grimaldo",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Morten Hjulmand",
+      "faces": 1,
+      "status": "one_face_detected"
     }
   ]
 }

@@ -990,60 +990,6 @@
     "modified": "Single-face crop, resized and converted to WebP"
   },
   {
-    "player": "Xavi",
-    "file": "player-047.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Xavi_Hern%C3%A1ndez_-_002_(cropped).jpg",
-    "author": "Mutari 15:45, 5 March 2008 (UTC)",
-    "license": "Public domain",
-    "license_url": "",
-    "modified": "Single-face crop, resized and converted to WebP"
-  },
-  {
-    "player": "Roberto Carlos (footballer)",
-    "file": "player-060.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Roberto_Carlos_2011.jpg",
-    "author": "Майоров Владимир",
-    "license": "CC BY-SA 3.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-    "modified": "Single-face crop, resized and converted to WebP"
-  },
-  {
-    "player": "Michel Platini",
-    "file": "player-078.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:AM_100_dram_Ag_2011_Football_Platini_b.PNG",
-    "author": "Central Bank of Armenia",
-    "license": "Public domain",
-    "license_url": "",
-    "modified": "Single-face crop, resized and converted to WebP"
-  },
-  {
-    "player": "Cristian Romero (footballer, born 1998)",
-    "file": "player-105.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Cristian_Romero_Argentina_v_Egypt_7_July_2026-248.jpg",
-    "author": "Bryan Berlin",
-    "license": "CC BY-SA 4.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-    "modified": "Single-face crop, resized and converted to WebP"
-  },
-  {
-    "player": "Alejandro Grimaldo",
-    "file": "player-114.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Alex_Grimaldo_France_v_Spain_7.24.26-002.jpg",
-    "author": "Bryan Berlin",
-    "license": "CC BY-SA 4.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-    "modified": "Single-face crop, resized and converted to WebP"
-  },
-  {
-    "player": "Morten Hjulmand",
-    "file": "player-115.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Hjulmand.png",
-    "author": "RTP",
-    "license": "CC BY 4.0",
-    "license_url": "https://creativecommons.org/licenses/by/4.0",
-    "modified": "Single-face crop, resized and converted to WebP"
-  },
-  {
     "player": "Andriy Lunin",
     "file": "player-118.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Andriy_Lunin,_Real_Madrid,_2022.jpg",
@@ -1185,6 +1131,60 @@
     "author": "Bryan Berlin",
     "license": "CC BY-SA 4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "modified": "Single-face crop, resized and converted to WebP"
+  },
+  {
+    "player": "Xavi",
+    "file": "player-047.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Xavi_Hern%C3%A1ndez_-_002_(cropped).jpg",
+    "author": "Mutari 15:45, 5 March 2008 (UTC)",
+    "license": "Public domain",
+    "license_url": "",
+    "modified": "Single-face crop, resized and converted to WebP"
+  },
+  {
+    "player": "Roberto Carlos (footballer)",
+    "file": "player-060.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Roberto_Carlos_2011.jpg",
+    "author": "Майоров Владимир",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "modified": "Single-face crop, resized and converted to WebP"
+  },
+  {
+    "player": "Michel Platini",
+    "file": "player-078.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:AM_100_dram_Ag_2011_Football_Platini_b.PNG",
+    "author": "Central Bank of Armenia",
+    "license": "Public domain",
+    "license_url": "",
+    "modified": "Single-face crop, resized and converted to WebP"
+  },
+  {
+    "player": "Cristian Romero (footballer, born 1998)",
+    "file": "player-105.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Cristian_Romero_Argentina_v_Egypt_7_July_2026-248.jpg",
+    "author": "Bryan Berlin",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "modified": "Single-face crop, resized and converted to WebP"
+  },
+  {
+    "player": "Alejandro Grimaldo",
+    "file": "player-114.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Alex_Grimaldo_France_v_Spain_7.24.26-002.jpg",
+    "author": "Bryan Berlin",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "modified": "Single-face crop, resized and converted to WebP"
+  },
+  {
+    "player": "Morten Hjulmand",
+    "file": "player-115.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Hjulmand.png",
+    "author": "RTP",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
     "modified": "Single-face crop, resized and converted to WebP"
   }
 ]
