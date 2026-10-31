@@ -1,6 +1,6 @@
 {
   "method": "OpenCV Haar frontal face detection; false positives and missed profiles possible; manual visual verification still required",
-  "total": 116,
+  "total": 132,
   "flagged": [
     {
       "player": "Mohamed Salah",
@@ -185,6 +185,56 @@
     {
       "player": "Robin Le Normand",
       "faces": 0,
+      "status": "review"
+    },
+    {
+      "player": "Andriy Lunin",
+      "faces": 0,
+      "status": "review"
+    },
+    {
+      "player": "Ibrahima Konaté",
+      "faces": 0,
+      "status": "review"
+    },
+    {
+      "player": "Álvaro Carreras",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Antonio Rüdiger",
+      "faces": 3,
+      "status": "review"
+    },
+    {
+      "player": "Ferland Mendy",
+      "faces": 0,
+      "status": "review"
+    },
+    {
+      "player": "Denzel Dumfries",
+      "faces": 0,
+      "status": "review"
+    },
+    {
+      "player": "Arda Güler",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Rodrygo",
+      "faces": 5,
+      "status": "review"
+    },
+    {
+      "player": "Endrick (footballer, born 2006)",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Yan Diomande",
+      "faces": 4,
       "status": "review"
     }
   ],
@@ -768,6 +818,86 @@
       "player": "Morten Hjulmand",
       "faces": 1,
       "status": "one_face_detected"
+    },
+    {
+      "player": "Andriy Lunin",
+      "faces": 0,
+      "status": "review"
+    },
+    {
+      "player": "Éder Militão",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Dean Huijsen",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Ibrahima Konaté",
+      "faces": 0,
+      "status": "review"
+    },
+    {
+      "player": "Marc Cucurella",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Álvaro Carreras",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Antonio Rüdiger",
+      "faces": 3,
+      "status": "review"
+    },
+    {
+      "player": "Ferland Mendy",
+      "faces": 0,
+      "status": "review"
+    },
+    {
+      "player": "Denzel Dumfries",
+      "faces": 0,
+      "status": "review"
+    },
+    {
+      "player": "Eduardo Camavinga",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Aurélien Tchouaméni",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Arda Güler",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Rodrygo",
+      "faces": 5,
+      "status": "review"
+    },
+    {
+      "player": "Endrick (footballer, born 2006)",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Brahim Díaz",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Yan Diomande",
+      "faces": 4,
+      "status": "review"
     }
   ]
 }
