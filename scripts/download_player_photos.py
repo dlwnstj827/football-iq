@@ -119,7 +119,26 @@ PLAYERS={
  "Alejandro Grimaldo": "player-114.webp",
  "Morten Hjulmand": "player-115.webp",
  "Alexander Sørloth": "player-116.webp",
- "Jonathan David": "player-117.webp"
+ "Jonathan David": "player-117.webp",
+ "Andriy Lunin": "player-118.webp",
+ "Raúl Asencio": "player-119.webp",
+ "Éder Militão": "player-120.webp",
+ "Dean Huijsen": "player-121.webp",
+ "Ibrahima Konaté": "player-122.webp",
+ "Marc Cucurella": "player-123.webp",
+ "Álvaro Carreras": "player-124.webp",
+ "Antonio Rüdiger": "player-125.webp",
+ "Ferland Mendy": "player-126.webp",
+ "Denzel Dumfries": "player-127.webp",
+ "Eduardo Camavinga": "player-128.webp",
+ "Aurélien Tchouaméni": "player-129.webp",
+ "Arda Güler": "player-130.webp",
+ "Thiago Pitarch": "player-131.webp",
+ "Rodrygo": "player-132.webp",
+ "Endrick (footballer, born 2006)": "player-133.webp",
+ "Brahim Díaz": "player-134.webp",
+ "Yan Diomande": "player-135.webp",
+ "Carlos Espí": "player-136.webp"
 }
 HEADERS={"User-Agent":"FootballIQ/1.0 (educational image attribution pilot; https://github.com/dlwnstj827/football-iq)"}
 def api(base,params):
@@ -150,7 +169,26 @@ ALTERNATES={
  "Alejandro Grimaldo": "Alejandro Grimaldo Bayer Leverkusen",
  "Morten Hjulmand": "Morten Hjulmand Sporting Portugal",
  "Alexander Sørloth": "Alexander Sorloth football portrait",
- "Jonathan David": "Jonathan David football football portrait"
+ "Jonathan David": "Jonathan David football football portrait",
+ "Andriy Lunin": "Andriy Lunin football player portrait",
+ "Raúl Asencio": "Raúl Asencio football player portrait",
+ "Éder Militão": "Éder Militão football player portrait",
+ "Dean Huijsen": "Dean Huijsen football player portrait",
+ "Ibrahima Konaté": "Ibrahima Konaté football player portrait",
+ "Marc Cucurella": "Marc Cucurella football player portrait",
+ "Álvaro Carreras": "Álvaro Carreras football player portrait",
+ "Antonio Rüdiger": "Antonio Rüdiger football player portrait",
+ "Ferland Mendy": "Ferland Mendy football player portrait",
+ "Denzel Dumfries": "Denzel Dumfries football player portrait",
+ "Eduardo Camavinga": "Eduardo Camavinga football player portrait",
+ "Aurélien Tchouaméni": "Aurélien Tchouaméni football player portrait",
+ "Arda Güler": "Arda Güler football player portrait",
+ "Thiago Pitarch": "Thiago Pitarch football player portrait",
+ "Rodrygo": "Rodrygo football player portrait",
+ "Endrick (footballer, born 2006)": "Endrick (footballer, born 2006) football player portrait",
+ "Brahim Díaz": "Brahim Díaz football player portrait",
+ "Yan Diomande": "Yan Diomande football player portrait",
+ "Carlos Espí": "Carlos Espí football player portrait"
 }
 def photo_candidates(title,lead):
  if lead:yield lead
