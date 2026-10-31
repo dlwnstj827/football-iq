@@ -909,15 +909,6 @@
     "modified": "Resized and converted to WebP"
   },
   {
-    "player": "Robin Le Normand",
-    "file": "player-106.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Robin_Le_Normand_2122.jpg",
-    "author": "Basara001",
-    "license": "CC BY-SA 4.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-    "modified": "Resized and converted to WebP"
-  },
-  {
     "player": "Marc Pubill",
     "file": "player-107.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Marc_Pubill_Argentina_v_Spain_19_July_2026-312.jpg",
@@ -1020,6 +1011,24 @@
     "player": "Cristian Romero (footballer, born 1998)",
     "file": "player-105.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Cristian_Romero_Argentina_v_Egypt_7_July_2026-248.jpg",
+    "author": "Bryan Berlin",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "modified": "Resized and converted to WebP"
+  },
+  {
+    "player": "Robin Le Normand",
+    "file": "player-106.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:FC_Salzburg_vs._Atletico_Madrid_(2025-01-29_UEFA_Championsleague)_56_(cropped).jpg",
+    "author": "Werner100359",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "modified": "Resized and converted to WebP"
+  },
+  {
+    "player": "Alejandro Grimaldo",
+    "file": "player-114.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Spain_World_Cup_winners_Argentina_v_Spain_19_July_2026-349_(Alejandro_Grimaldo).jpg",
     "author": "Bryan Berlin",
     "license": "CC BY-SA 4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",

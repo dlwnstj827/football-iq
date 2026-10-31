@@ -1,6 +1,6 @@
 {
   "method": "OpenCV Haar frontal face detection; false positives and missed profiles possible; manual visual verification still required",
-  "total": 115,
+  "total": 116,
   "flagged": [
     {
       "player": "Mohamed Salah",
@@ -168,11 +168,6 @@
       "status": "review"
     },
     {
-      "player": "Robin Le Normand",
-      "faces": 0,
-      "status": "review"
-    },
-    {
       "player": "Marc Pubill",
       "faces": 3,
       "status": "review"
@@ -190,6 +185,11 @@
     {
       "player": "Cristian Romero (footballer, born 1998)",
       "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Robin Le Normand",
+      "faces": 0,
       "status": "review"
     }
   ],
@@ -700,11 +700,6 @@
       "status": "review"
     },
     {
-      "player": "Robin Le Normand",
-      "faces": 0,
-      "status": "review"
-    },
-    {
       "player": "Marc Pubill",
       "faces": 3,
       "status": "review"
@@ -763,6 +758,16 @@
       "player": "Cristian Romero (footballer, born 1998)",
       "faces": 2,
       "status": "review"
+    },
+    {
+      "player": "Robin Le Normand",
+      "faces": 0,
+      "status": "review"
+    },
+    {
+      "player": "Alejandro Grimaldo",
+      "faces": 1,
+      "status": "one_face_detected"
     },
     {
       "player": "Morten Hjulmand",
