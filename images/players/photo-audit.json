@@ -208,11 +208,6 @@
       "status": "review"
     },
     {
-      "player": "Ferland Mendy",
-      "faces": 0,
-      "status": "review"
-    },
-    {
       "player": "Denzel Dumfries",
       "faces": 0,
       "status": "review"
@@ -825,11 +820,6 @@
       "status": "review"
     },
     {
-      "player": "Ferland Mendy",
-      "faces": 0,
-      "status": "review"
-    },
-    {
       "player": "Denzel Dumfries",
       "faces": 0,
       "status": "review"
@@ -896,6 +886,11 @@
     },
     {
       "player": "Morten Hjulmand",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Ferland Mendy",
       "faces": 1,
       "status": "one_face_detected"
     }

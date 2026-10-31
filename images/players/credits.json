@@ -1053,15 +1053,6 @@
     "modified": "Single-face crop, resized and converted to WebP"
   },
   {
-    "player": "Ferland Mendy",
-    "file": "player-126.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Ofrenda_de_la_Liga_y_la_Champions-49-L.Mill%C3%A1n_(52109311048)_(Ferland_Mendy).jpg",
-    "author": "Fotografías Archimadrid.es",
-    "license": "CC BY 2.0",
-    "license_url": "https://creativecommons.org/licenses/by/2.0",
-    "modified": "Single-face crop, resized and converted to WebP"
-  },
-  {
     "player": "Denzel Dumfries",
     "file": "player-127.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Edison_ndreca_inter_egnati_(cropped_Denzel_Dumfries).jpg",
@@ -1185,6 +1176,15 @@
     "author": "RTP",
     "license": "CC BY 4.0",
     "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "modified": "Single-face crop, resized and converted to WebP"
+  },
+  {
+    "player": "Ferland Mendy",
+    "file": "player-126.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Ferland_Mendy,_June_2019.jpg",
+    "author": "Real Madrid",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
     "modified": "Single-face crop, resized and converted to WebP"
   }
 ]
