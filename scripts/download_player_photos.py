@@ -169,24 +169,24 @@ ALTERNATES={
  "Morten Hjulmand": "Morten Hjulmand Sporting Portugal",
  "Alexander Sørloth": "Alexander Sorloth football portrait",
  "Jonathan David": "Jonathan David football football portrait",
- "Andriy Lunin": "Andriy Lunin football player portrait",
- "Raúl Asencio": "Raúl Asencio football player portrait",
+ "Andriy Lunin": "Andriy Lunin Real Madrid portrait",
+ "Raúl Asencio": "Raul Asencio Real Madrid football portrait",
  "Éder Militão": "Éder Militão football player portrait",
  "Dean Huijsen": "Dean Huijsen football player portrait",
  "Ibrahima Konaté": "Ibrahima Konaté football player portrait",
  "Marc Cucurella": "Marc Cucurella football player portrait",
  "Álvaro Carreras": "Álvaro Carreras football player portrait",
  "Antonio Rüdiger": "Antonio Rüdiger football player portrait",
- "Ferland Mendy": "Ferland Mendy football player portrait",
- "Denzel Dumfries": "Denzel Dumfries football player portrait",
+ "Ferland Mendy": "Ferland Mendy Real Madrid portrait",
+ "Denzel Dumfries": "Denzel Dumfries Netherlands portrait",
  "Eduardo Camavinga": "Eduardo Camavinga football player portrait",
  "Aurélien Tchouaméni": "Aurélien Tchouaméni football player portrait",
  "Arda Güler": "Arda Güler football player portrait",
  "Rodrygo": "Rodrygo football player portrait",
- "Endrick (footballer, born 2006)": "Endrick (footballer, born 2006) football player portrait",
+ "Endrick (footballer, born 2006)": "Endrick Brazil Real Madrid portrait",
  "Brahim Díaz": "Brahim Díaz football player portrait",
  "Yan Diomande": "Yan Diomande football player portrait",
- "Carlos Espí": "Carlos Espí football player portrait"
+ "Carlos Espí": "Carlos Espi Levante football portrait"
 }
 def photo_candidates(title,lead):
  if lead:yield lead
@@ -205,7 +205,13 @@ REPLACE_PHOTOS={
  "Cristian Romero (footballer, born 1998)":("romero","cuti"),
  "Julián Álvarez (footballer)":("julian alvarez","julian_alvarez","julián álvarez"),
  "Alejandro Grimaldo":("grimaldo",),
- "Morten Hjulmand":("hjulmand",)
+ "Morten Hjulmand":("hjulmand",),
+ "Andriy Lunin":("lunin",),
+ "Raúl Asencio":("asencio",),
+ "Ferland Mendy":("ferland","mendy"),
+ "Denzel Dumfries":("dumfries",),
+ "Endrick (footballer, born 2006)":("endrick",),
+ "Carlos Espí":("espi","espí")
 }
 # Manually selected replacement candidates. Never silently reuse the rejected image.
 PREFERRED_REPLACEMENTS={
