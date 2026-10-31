@@ -873,33 +873,6 @@
     "modified": "Resized and converted to WebP"
   },
   {
-    "player": "Xavi",
-    "file": "player-047.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Xavi_Hern%C3%A1ndez_-_002_(cropped).jpg",
-    "author": "Mutari 15:45, 5 March 2008 (UTC)",
-    "license": "Public domain",
-    "license_url": "",
-    "modified": "Resized and converted to WebP"
-  },
-  {
-    "player": "Roberto Carlos (footballer)",
-    "file": "player-060.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Roberto_Carlos_2011.jpg",
-    "author": "Майоров Владимир",
-    "license": "CC BY-SA 3.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-    "modified": "Resized and converted to WebP"
-  },
-  {
-    "player": "Michel Platini",
-    "file": "player-078.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:AM_100_dram_Ag_2011_Football_Platini_b.PNG",
-    "author": "Central Bank of Armenia",
-    "license": "Public domain",
-    "license_url": "",
-    "modified": "Resized and converted to WebP"
-  },
-  {
     "player": "Juan Musso",
     "file": "player-101.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg",
@@ -933,15 +906,6 @@
     "author": "Carlo Bruil Fotografie",
     "license": "CC BY 2.0",
     "license_url": "https://creativecommons.org/licenses/by/2.0",
-    "modified": "Resized and converted to WebP"
-  },
-  {
-    "player": "Cristian Romero (footballer, born 1998)",
-    "file": "player-105.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Argentina_Starting_XI_Argentina_v_Egypt_7_July_2026-118.jpg",
-    "author": "Bryan Berlin",
-    "license": "CC BY-SA 4.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
     "modified": "Resized and converted to WebP"
   },
   {
@@ -1029,6 +993,42 @@
     "player": "Jonathan David",
     "file": "player-117.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Jonathan_David_Canada_v_Qatar_18_June_2026-242_(cropped).jpg",
+    "author": "Bryan Berlin",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "modified": "Resized and converted to WebP"
+  },
+  {
+    "player": "Xavi",
+    "file": "player-047.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Xavi_Hern%C3%A1ndez_-_002_(cropped).jpg",
+    "author": "Mutari 15:45, 5 March 2008 (UTC)",
+    "license": "Public domain",
+    "license_url": "",
+    "modified": "Resized and converted to WebP"
+  },
+  {
+    "player": "Roberto Carlos (footballer)",
+    "file": "player-060.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Roberto_Carlos_2011.jpg",
+    "author": "Майоров Владимир",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "modified": "Resized and converted to WebP"
+  },
+  {
+    "player": "Michel Platini",
+    "file": "player-078.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:AM_100_dram_Ag_2011_Football_Platini_b.PNG",
+    "author": "Central Bank of Armenia",
+    "license": "Public domain",
+    "license_url": "",
+    "modified": "Resized and converted to WebP"
+  },
+  {
+    "player": "Cristian Romero (footballer, born 1998)",
+    "file": "player-105.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Cristian_Romero_Argentina_v_Egypt_7_July_2026-248.jpg",
     "author": "Bryan Berlin",
     "license": "CC BY-SA 4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
