@@ -188,11 +188,6 @@
       "status": "review"
     },
     {
-      "player": "Morten Hjulmand",
-      "faces": 2,
-      "status": "review"
-    },
-    {
       "player": "Cristian Romero (footballer, born 1998)",
       "faces": 2,
       "status": "review"
@@ -740,11 +735,6 @@
       "status": "review"
     },
     {
-      "player": "Morten Hjulmand",
-      "faces": 2,
-      "status": "review"
-    },
-    {
       "player": "Alexander Sørloth",
       "faces": 1,
       "status": "one_face_detected"
@@ -773,6 +763,11 @@
       "player": "Cristian Romero (footballer, born 1998)",
       "faces": 2,
       "status": "review"
+    },
+    {
+      "player": "Morten Hjulmand",
+      "faces": 1,
+      "status": "one_face_detected"
     }
   ]
 }

@@ -972,15 +972,6 @@
     "modified": "Resized and converted to WebP"
   },
   {
-    "player": "Morten Hjulmand",
-    "file": "player-115.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:MortenHjulmandSporting24.jpg",
-    "author": "Splinter1333",
-    "license": "CC BY-SA 4.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-    "modified": "Resized and converted to WebP"
-  },
-  {
     "player": "Alexander Sørloth",
     "file": "player-116.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Alexander_Sorloth_France_v_Norway_26_June_26-048.jpg",
@@ -1032,6 +1023,15 @@
     "author": "Bryan Berlin",
     "license": "CC BY-SA 4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "modified": "Resized and converted to WebP"
+  },
+  {
+    "player": "Morten Hjulmand",
+    "file": "player-115.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Hjulmand.png",
+    "author": "RTP",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
     "modified": "Resized and converted to WebP"
   }
 ]
