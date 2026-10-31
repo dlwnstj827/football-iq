@@ -735,6 +735,11 @@
       "status": "one_face_detected"
     },
     {
+      "player": "Robin Le Normand",
+      "faces": 0,
+      "status": "review"
+    },
+    {
       "player": "Xavi",
       "faces": 1,
       "status": "one_face_detected"
@@ -753,11 +758,6 @@
       "player": "Cristian Romero (footballer, born 1998)",
       "faces": 1,
       "status": "one_face_detected"
-    },
-    {
-      "player": "Robin Le Normand",
-      "faces": 0,
-      "status": "review"
     },
     {
       "player": "Alejandro Grimaldo",

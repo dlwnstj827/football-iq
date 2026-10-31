@@ -981,13 +981,22 @@
     "modified": "Resized and converted to WebP"
   },
   {
+    "player": "Robin Le Normand",
+    "file": "player-106.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:FC_Salzburg_vs._Atletico_Madrid_(2025-01-29_UEFA_Championsleague)_56_(cropped).jpg",
+    "author": "Werner100359",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "modified": "Single-face crop, resized and converted to WebP"
+  },
+  {
     "player": "Xavi",
     "file": "player-047.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Xavi_Hern%C3%A1ndez_-_002_(cropped).jpg",
     "author": "Mutari 15:45, 5 March 2008 (UTC)",
     "license": "Public domain",
     "license_url": "",
-    "modified": "Resized and converted to WebP"
+    "modified": "Single-face crop, resized and converted to WebP"
   },
   {
     "player": "Roberto Carlos (footballer)",
@@ -1012,15 +1021,6 @@
     "file": "player-105.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Cristian_Romero_Argentina_v_Egypt_7_July_2026-248.jpg",
     "author": "Bryan Berlin",
-    "license": "CC BY-SA 4.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-    "modified": "Single-face crop, resized and converted to WebP"
-  },
-  {
-    "player": "Robin Le Normand",
-    "file": "player-106.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:FC_Salzburg_vs._Atletico_Madrid_(2025-01-29_UEFA_Championsleague)_56_(cropped).jpg",
-    "author": "Werner100359",
     "license": "CC BY-SA 4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
     "modified": "Single-face crop, resized and converted to WebP"
