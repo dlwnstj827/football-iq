@@ -144,17 +144,17 @@ ALTERNATES={
  "Jan Oblak": "Jan Oblak football portrait",
  "Marcos Llorente": "Marcos Llorente football portrait",
  "Dávid Hancko": "David Hancko football portrait",
- "Cristian Romero (footballer, born 1998)": "Cristian Romero football football portrait",
- "Robin Le Normand": "Robin Le Normand football portrait",
+ "Cristian Romero (footballer, born 1998)": "Cristian Romero Argentina portrait",
+ "Robin Le Normand": "Robin Le Normand Spain portrait",
  "Marc Pubill": "Marc Pubill football portrait",
  "Johnny Cardoso": "Johnny Cardoso football portrait",
  "Koke (footballer, born 1992)": "Koke Atletico Madrid football portrait",
- "Pablo Barrios (footballer)": "Pablo Barrios Atletico Madrid football portrait",
+ "Pablo Barrios (footballer)": "Pablo Barrios Atletico Madrid",
  "Álex Baena": "Alex Baena football portrait",
- "Ademola Lookman": "Ademola Lookman football portrait",
+ "Ademola Lookman": "Ademola Lookman Atalanta portrait",
  "Giuliano Simeone": "Giuliano Simeone football portrait",
- "Alejandro Grimaldo": "Alejandro Grimaldo football portrait",
- "Morten Hjulmand": "Morten Hjulmand football portrait",
+ "Alejandro Grimaldo": "Alejandro Grimaldo Bayer Leverkusen",
+ "Morten Hjulmand": "Morten Hjulmand Sporting Portugal",
  "Alexander Sørloth": "Alexander Sorloth football portrait",
  "Jonathan David": "Jonathan David football football portrait"
 }
@@ -171,7 +171,13 @@ REPLACE_PHOTOS={
  "Xavi":("xavi","hernandez","hernández"),
  "Roberto Carlos (footballer)":("roberto carlos","roberto_carlos","roberto-carlos"),
  "Kim Min-jae":("kim min","kim_min","kim-min","min-jae","min_jae","minjae"),
- "Michel Platini":("platini",)
+ "Michel Platini":("platini",),
+ "Cristian Romero (footballer, born 1998)":("romero","cuti"),
+ "Robin Le Normand":("le normand","le_normand","le-normand"),
+ "Pablo Barrios (footballer)":("pablo barrios","pablo_barrios","barrios"),
+ "Ademola Lookman":("lookman",),
+ "Alejandro Grimaldo":("grimaldo",),
+ "Morten Hjulmand":("hjulmand",)
 }
 credits_path=OUT/"credits.json"
 credits=json.loads(credits_path.read_text(encoding="utf-8")) if credits_path.exists() else []
@@ -198,7 +204,7 @@ for title,filename in PLAYERS.items():
      label=candidate.lower()
      required=REPLACE_PHOTOS[title]
      if not any(word in label for word in required):raise ValueError("Filename does not identify target player")
-     if any(word in label for word in (" and "," vs "," versus "," with "," team "," group "," squad "," haaland "," montes ")):
+     if any(word in label for word in (" and "," vs "," versus "," with "," team "," group "," squad "," starting "," xi "," lineup "," haaland "," montes ")):
       raise ValueError("Possible multi-person image")
     source=item.get("thumburl") or item.get("url")
     req=urllib.request.Request(source,headers=HEADERS)
@@ -211,6 +217,8 @@ for title,filename in PLAYERS.items():
      cascade=cv2.CascadeClassifier(cv2.data.haarcascades+"haarcascade_frontalface_default.xml")
      faces=cascade.detectMultiScale(gray,scaleFactor=1.1,minNeighbors=4,minSize=(35,35))
      if len(faces)!=1:raise ValueError("Portrait requires exactly one detectable face; found "+str(len(faces)))
+     x,y,w,h=faces[0]
+     if w < pic.width*0.075 or h < pic.height*0.075:raise ValueError("Face too small for guessing game")
     pic.thumbnail((900,1000))
     pic.save(OUT/filename,"WEBP",quality=83,method=5)
     credits=[c for c in credits if c.get("file")!=filename]
