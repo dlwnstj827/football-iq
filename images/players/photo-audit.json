@@ -1,6 +1,6 @@
 {
   "method": "OpenCV Haar frontal face detection; false positives and missed profiles possible; manual visual verification still required",
-  "total": 145,
+  "total": 149,
   "flagged": [
     {
       "player": "Mohamed Salah",
@@ -234,6 +234,21 @@
     },
     {
       "player": "Karim Adeyemi",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Gerard Martín",
+      "faces": 0,
+      "status": "review"
+    },
+    {
+      "player": "Eric García",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Anthony Gordon",
       "faces": 2,
       "status": "review"
     }
@@ -865,41 +880,6 @@
       "status": "review"
     },
     {
-      "player": "Xavi",
-      "faces": 1,
-      "status": "one_face_detected"
-    },
-    {
-      "player": "Roberto Carlos (footballer)",
-      "faces": 1,
-      "status": "one_face_detected"
-    },
-    {
-      "player": "Michel Platini",
-      "faces": 1,
-      "status": "one_face_detected"
-    },
-    {
-      "player": "Cristian Romero (footballer, born 1998)",
-      "faces": 1,
-      "status": "one_face_detected"
-    },
-    {
-      "player": "Alejandro Grimaldo",
-      "faces": 1,
-      "status": "one_face_detected"
-    },
-    {
-      "player": "Morten Hjulmand",
-      "faces": 1,
-      "status": "one_face_detected"
-    },
-    {
-      "player": "Ferland Mendy",
-      "faces": 1,
-      "status": "one_face_detected"
-    },
-    {
       "player": "Wojciech Szczęsny",
       "faces": 1,
       "status": "one_face_detected"
@@ -963,6 +943,61 @@
       "player": "Roony Bardghji",
       "faces": 1,
       "status": "one_face_detected"
+    },
+    {
+      "player": "Xavi",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Roberto Carlos (footballer)",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Michel Platini",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Cristian Romero (footballer, born 1998)",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Alejandro Grimaldo",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Morten Hjulmand",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Ferland Mendy",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Joan García",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Gerard Martín",
+      "faces": 0,
+      "status": "review"
+    },
+    {
+      "player": "Eric García",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Anthony Gordon",
+      "faces": 2,
+      "status": "review"
     }
   ]
 }
