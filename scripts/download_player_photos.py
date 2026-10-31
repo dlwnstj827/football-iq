@@ -179,6 +179,16 @@ REPLACE_PHOTOS={
  "Alejandro Grimaldo":("grimaldo",),
  "Morten Hjulmand":("hjulmand",)
 }
+# Manually selected replacement candidates. Never silently reuse the rejected image.
+PREFERRED_REPLACEMENTS={
+ "Robin Le Normand":["Robin Le Normand, FC Salzburg vs. Atletico Madrid (2025-01-29 UEFA Championsleague) 56 (cropped).jpg","Robin Le Normand 2018.jpg"],
+ "Ademola Lookman":["Ademola Lookman, Charlton (cropped).jpg","Ademola Lookman, Charlton.jpg"],
+ "Alejandro Grimaldo":["Alejandro Grimaldo (5) (cropped).jpg","Alejandro Grimaldo (3).jpg"],
+ "Morten Hjulmand":["Hjulmand.png","Milan Lecce 2023 Hjulmand 1.jpg"],
+ "Pablo Barrios (footballer)":[]
+}
+# The only categorized Commons image for Pablo Barrios is a group pre-match photo.
+# Leave him unfilled until a licensed individual portrait is available.
 credits_path=OUT/"credits.json"
 credits=json.loads(credits_path.read_text(encoding="utf-8")) if credits_path.exists() else []
 for title,filename in PLAYERS.items():
@@ -190,7 +200,7 @@ for title,filename in PLAYERS.items():
   entry=next(iter(page["query"]["pages"].values()))
   image=entry.get("pageimage")
   saved=False
-  for candidate in photo_candidates(title,None if title in REPLACE_PHOTOS else image):
+  for candidate in (PREFERRED_REPLACEMENTS[title] if title in PREFERRED_REPLACEMENTS else photo_candidates(title,None if title in REPLACE_PHOTOS else image)):
    try:
     info=api("https://commons.wikimedia.org/w/api.php",{"action":"query","titles":"File:"+candidate,"prop":"imageinfo","iiprop":"url|extmetadata","iiurlwidth":"900","format":"json"})
     entry=next(iter(info["query"]["pages"].values()))
@@ -200,7 +210,7 @@ for title,filename in PLAYERS.items():
     license_name=get("LicenseShortName");license_url=get("LicenseUrl")
     if not (re.search(r"CC BY(?:-SA)?(?: [234]\.0|-[234]\.0| 4\.0|-4\.0)?",license_name,re.I) or "public domain" in license_name.lower() or license_name.upper() in ("CC0","CC ZERO")):
      raise ValueError("License not in allowed list: "+license_name)
-    if title in REPLACE_PHOTOS:
+    if title in REPLACE_PHOTOS and title not in PREFERRED_REPLACEMENTS:
      label=candidate.lower()
      required=REPLACE_PHOTOS[title]
      if not any(word in label for word in required):raise ValueError("Filename does not identify target player")
