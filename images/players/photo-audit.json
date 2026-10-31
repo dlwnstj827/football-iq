@@ -1,6 +1,6 @@
 {
   "method": "OpenCV Haar frontal face detection; false positives and missed profiles possible; manual visual verification still required",
-  "total": 132,
+  "total": 145,
   "flagged": [
     {
       "player": "Mohamed Salah",
@@ -230,6 +230,11 @@
     {
       "player": "Yan Diomande",
       "faces": 4,
+      "status": "review"
+    },
+    {
+      "player": "Karim Adeyemi",
+      "faces": 2,
       "status": "review"
     }
   ],
@@ -891,6 +896,71 @@
     },
     {
       "player": "Ferland Mendy",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Wojciech Szczęsny",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "João Cancelo",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Alejandro Balde",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Pau Cubarsí",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Andreas Christensen",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Jules Koundé",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Fermín López",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Dani Olmo",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Frenkie de Jong",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Marc Bernal",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Gabriel Jesus",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Karim Adeyemi",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Roony Bardghji",
       "faces": 1,
       "status": "one_face_detected"
     }
