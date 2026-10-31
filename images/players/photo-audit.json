@@ -945,6 +945,26 @@
       "status": "one_face_detected"
     },
     {
+      "player": "Joan García",
+      "faces": 1,
+      "status": "one_face_detected"
+    },
+    {
+      "player": "Gerard Martín",
+      "faces": 0,
+      "status": "review"
+    },
+    {
+      "player": "Eric García",
+      "faces": 2,
+      "status": "review"
+    },
+    {
+      "player": "Anthony Gordon",
+      "faces": 2,
+      "status": "review"
+    },
+    {
       "player": "Xavi",
       "faces": 1,
       "status": "one_face_detected"
@@ -978,26 +998,6 @@
       "player": "Ferland Mendy",
       "faces": 1,
       "status": "one_face_detected"
-    },
-    {
-      "player": "Joan García",
-      "faces": 1,
-      "status": "one_face_detected"
-    },
-    {
-      "player": "Gerard Martín",
-      "faces": 0,
-      "status": "review"
-    },
-    {
-      "player": "Eric García",
-      "faces": 2,
-      "status": "review"
-    },
-    {
-      "player": "Anthony Gordon",
-      "faces": 2,
-      "status": "review"
     }
   ]
 }

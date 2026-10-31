@@ -1242,6 +1242,42 @@
     "modified": "Single-face crop, resized and converted to WebP"
   },
   {
+    "player": "Joan García",
+    "file": "player-137.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Joan_Garcia_Argentina_v_Spain_19_July_2026-009.jpg",
+    "author": "Bryan Berlin",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "modified": "Single-face crop, resized and converted to WebP"
+  },
+  {
+    "player": "Gerard Martín",
+    "file": "player-144.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2025_04_26_Final_de_la_Copa_del_Rey_-_54482387776_-_Gerard_Mart%C3%ADn.jpg",
+    "author": "Junta de Andalucía",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "modified": "Single-face crop, resized and converted to WebP"
+  },
+  {
+    "player": "Eric García",
+    "file": "player-146.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Eric_Garcia_Argentina_v_Spain_19_July_2026-313_(face_crop).jpg",
+    "author": "Bryan Berlin",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "modified": "Single-face crop, resized and converted to WebP"
+  },
+  {
+    "player": "Anthony Gordon",
+    "file": "player-153.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Anthony_Gordon_England_v_Ghana_23_June_2026-017_(cropped).jpg",
+    "author": "Bryan Berlin",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "modified": "Single-face crop, resized and converted to WebP"
+  },
+  {
     "player": "Xavi",
     "file": "player-047.webp",
     "source": "https://commons.wikimedia.org/wiki/File:Xavi_Hern%C3%A1ndez_-_002_(cropped).jpg",
@@ -1302,42 +1338,6 @@
     "author": "Real Madrid",
     "license": "CC BY 3.0",
     "license_url": "https://creativecommons.org/licenses/by/3.0",
-    "modified": "Single-face crop, resized and converted to WebP"
-  },
-  {
-    "player": "Joan García",
-    "file": "player-137.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Joan_Garcia_Argentina_v_Spain_19_July_2026-009.jpg",
-    "author": "Bryan Berlin",
-    "license": "CC BY-SA 4.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-    "modified": "Single-face crop, resized and converted to WebP"
-  },
-  {
-    "player": "Gerard Martín",
-    "file": "player-144.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:2025_04_26_Final_de_la_Copa_del_Rey_-_54482387776_-_Gerard_Mart%C3%ADn.jpg",
-    "author": "Junta de Andalucía",
-    "license": "CC BY-SA 2.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-    "modified": "Single-face crop, resized and converted to WebP"
-  },
-  {
-    "player": "Eric García",
-    "file": "player-146.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Eric_Garcia_Argentina_v_Spain_19_July_2026-313_(face_crop).jpg",
-    "author": "Bryan Berlin",
-    "license": "CC BY-SA 4.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-    "modified": "Single-face crop, resized and converted to WebP"
-  },
-  {
-    "player": "Anthony Gordon",
-    "file": "player-153.webp",
-    "source": "https://commons.wikimedia.org/wiki/File:Anthony_Gordon_England_v_Ghana_23_June_2026-017_(cropped).jpg",
-    "author": "Bryan Berlin",
-    "license": "CC BY-SA 4.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
     "modified": "Single-face crop, resized and converted to WebP"
   }
 ]
