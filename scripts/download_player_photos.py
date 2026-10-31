@@ -173,7 +173,7 @@ REPLACE_PHOTOS={
 }
 # Manually selected replacement candidates. Never silently reuse the rejected image.
 PREFERRED_REPLACEMENTS={
- "Julián Álvarez (footballer)":["Julian Alvarez Argentina v Spain 19 July 2026-052 (cropped).jpg","Julian Alvarez Argentina v Spain 19 July 2026-173 (cropped).jpg"],
+ "Julián Álvarez (footballer)":["Julian Alvarez Argentina v Spain 19 July 2026-052 (cropped).jpg","Julian Alvarez Argentina v Spain 19 July 2026-173 (cropped).jpg","Julián Álvarez, FC Salzburg vs. Atletico Madrid (2025-01-29 UEFA Championsleague) 72 (cropped).jpg"],
  "Alejandro Grimaldo":["Alex Grimaldo Argentina v Spain 19 July 2026-314 (face crop).jpg","Alex Grimaldo France v Spain 7.24.26-002.jpg"],
  "Morten Hjulmand":["Hjulmand.png","Milan Lecce 2023 Hjulmand 1.jpg"],
 }
