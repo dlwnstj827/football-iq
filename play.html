@@ -151,6 +151,8 @@ async function tryLocalPhoto(p){
  }catch{return null}
 }
 async function fetchPhoto(p){
+ // Direct licensed solo portrait while the local image importer updates.
+ if(p.wiki==="Julián Álvarez (footballer)")return "https://commons.wikimedia.org/wiki/Special:Redirect/file/Julian_Alvarez_Argentina_v_Spain_19_July_2026-052_%28cropped%29.jpg?width=900";
  if(photoCache.has(p.wiki))return photoCache.get(p.wiki);
  const local=await tryLocalPhoto(p);
  if(local){photoCache.set(p.wiki,local);return local;}
