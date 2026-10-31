@@ -120,8 +120,6 @@ PLAYERS={
  "Morten Hjulmand": "player-115.webp",
  "Alexander Sørloth": "player-116.webp",
  "Jonathan David": "player-117.webp",
- "Andriy Lunin": "player-118.webp",
- "Raúl Asencio": "player-119.webp",
  "Éder Militão": "player-120.webp",
  "Dean Huijsen": "player-121.webp",
  "Ibrahima Konaté": "player-122.webp",
@@ -129,15 +127,12 @@ PLAYERS={
  "Álvaro Carreras": "player-124.webp",
  "Antonio Rüdiger": "player-125.webp",
  "Ferland Mendy": "player-126.webp",
- "Denzel Dumfries": "player-127.webp",
  "Eduardo Camavinga": "player-128.webp",
  "Aurélien Tchouaméni": "player-129.webp",
  "Arda Güler": "player-130.webp",
  "Rodrygo": "player-132.webp",
- "Endrick (footballer, born 2006)": "player-133.webp",
  "Brahim Díaz": "player-134.webp",
  "Yan Diomande": "player-135.webp",
- "Carlos Espí": "player-136.webp"
 }
 HEADERS={"User-Agent":"FootballIQ/1.0 (educational image attribution pilot; https://github.com/dlwnstj827/football-iq)"}
 def api(base,params):
@@ -169,8 +164,6 @@ ALTERNATES={
  "Morten Hjulmand": "Morten Hjulmand Sporting Portugal",
  "Alexander Sørloth": "Alexander Sorloth football portrait",
  "Jonathan David": "Jonathan David football football portrait",
- "Andriy Lunin": "Andriy Lunin Real Madrid portrait",
- "Raúl Asencio": "Raul Asencio Real Madrid football portrait",
  "Éder Militão": "Éder Militão football player portrait",
  "Dean Huijsen": "Dean Huijsen football player portrait",
  "Ibrahima Konaté": "Ibrahima Konaté football player portrait",
@@ -178,15 +171,12 @@ ALTERNATES={
  "Álvaro Carreras": "Álvaro Carreras football player portrait",
  "Antonio Rüdiger": "Antonio Rüdiger football player portrait",
  "Ferland Mendy": "Ferland Mendy Real Madrid portrait",
- "Denzel Dumfries": "Denzel Dumfries Netherlands portrait",
  "Eduardo Camavinga": "Eduardo Camavinga football player portrait",
  "Aurélien Tchouaméni": "Aurélien Tchouaméni football player portrait",
  "Arda Güler": "Arda Güler football player portrait",
  "Rodrygo": "Rodrygo football player portrait",
- "Endrick (footballer, born 2006)": "Endrick Brazil Real Madrid portrait",
  "Brahim Díaz": "Brahim Díaz football player portrait",
  "Yan Diomande": "Yan Diomande football player portrait",
- "Carlos Espí": "Carlos Espi Levante football portrait"
 }
 def photo_candidates(title,lead):
  if lead:yield lead
@@ -206,12 +196,7 @@ REPLACE_PHOTOS={
  "Julián Álvarez (footballer)":("julian alvarez","julian_alvarez","julián álvarez"),
  "Alejandro Grimaldo":("grimaldo",),
  "Morten Hjulmand":("hjulmand",),
- "Andriy Lunin":("lunin",),
- "Raúl Asencio":("asencio",),
  "Ferland Mendy":("ferland","mendy"),
- "Denzel Dumfries":("dumfries",),
- "Endrick (footballer, born 2006)":("endrick",),
- "Carlos Espí":("espi","espí")
 }
 # Manually selected replacement candidates. Never silently reuse the rejected image.
 PREFERRED_REPLACEMENTS={
