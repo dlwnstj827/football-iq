@@ -183,11 +183,6 @@
       "status": "review"
     },
     {
-      "player": "Cristian Romero (footballer, born 1998)",
-      "faces": 2,
-      "status": "review"
-    },
-    {
       "player": "Robin Le Normand",
       "faces": 0,
       "status": "review"
@@ -756,8 +751,8 @@
     },
     {
       "player": "Cristian Romero (footballer, born 1998)",
-      "faces": 2,
-      "status": "review"
+      "faces": 1,
+      "status": "one_face_detected"
     },
     {
       "player": "Robin Le Normand",
