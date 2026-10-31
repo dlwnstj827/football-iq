@@ -167,11 +167,13 @@ REPLACE_PHOTOS={
  "Kim Min-jae":("kim min","kim_min","kim-min","min-jae","min_jae","minjae"),
  "Michel Platini":("platini",),
  "Cristian Romero (footballer, born 1998)":("romero","cuti"),
+ "Julián Álvarez (footballer)":("julian alvarez","julian_alvarez","julián álvarez"),
  "Alejandro Grimaldo":("grimaldo",),
  "Morten Hjulmand":("hjulmand",)
 }
 # Manually selected replacement candidates. Never silently reuse the rejected image.
 PREFERRED_REPLACEMENTS={
+ "Julián Álvarez (footballer)":["Julian Alvarez Argentina v Spain 19 July 2026-052 (cropped).jpg","Julian Alvarez Argentina v Spain 19 July 2026-173 (cropped).jpg"],
  "Alejandro Grimaldo":["Alex Grimaldo Argentina v Spain 19 July 2026-314 (face crop).jpg","Alex Grimaldo France v Spain 7.24.26-002.jpg"],
  "Morten Hjulmand":["Hjulmand.png","Milan Lecce 2023 Hjulmand 1.jpg"],
 }
