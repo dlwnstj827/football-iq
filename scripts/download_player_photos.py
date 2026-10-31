@@ -181,9 +181,9 @@ REPLACE_PHOTOS={
 }
 # Manually selected replacement candidates. Never silently reuse the rejected image.
 PREFERRED_REPLACEMENTS={
- "Robin Le Normand":["Robin Le Normand, FC Salzburg vs. Atletico Madrid (2025-01-29 UEFA Championsleague) 56 (cropped).jpg","Robin Le Normand 2018.jpg"],
- "Ademola Lookman":["Ademola Lookman, Charlton (cropped).jpg","Ademola Lookman, Charlton.jpg"],
- "Alejandro Grimaldo":["Alejandro Grimaldo (5) (cropped).jpg","Alejandro Grimaldo (3).jpg"],
+ "Robin Le Normand":["Robin Le Normand, FC Salzburg vs. Atletico Madrid (2025-01-29 UEFA Championsleague) 56 (cropped).jpg","FC Salzburg vs. Atletico Madrid (2025-01-29 UEFA Championsleague) 56 (cropped).jpg"],
+ "Ademola Lookman":["Ademola Lookman, Charlton (cropped).jpg","Ademola Lookman against Derby 2.jpg"],
+ "Alejandro Grimaldo":["Alex Grimaldo Argentina v Spain 19 July 2026-314 (face crop).jpg","Spain World Cup winners Argentina v Spain 19 July 2026-349 (Alejandro Grimaldo).jpg"],
  "Morten Hjulmand":["Hjulmand.png","Milan Lecce 2023 Hjulmand 1.jpg"],
  "Pablo Barrios (footballer)":[]
 }
