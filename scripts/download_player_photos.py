@@ -183,7 +183,7 @@ REPLACE_PHOTOS={
 PREFERRED_REPLACEMENTS={
  "Robin Le Normand":["Robin Le Normand, FC Salzburg vs. Atletico Madrid (2025-01-29 UEFA Championsleague) 56 (cropped).jpg","FC Salzburg vs. Atletico Madrid (2025-01-29 UEFA Championsleague) 56 (cropped).jpg"],
  "Ademola Lookman":["Ademola Lookman, Charlton (cropped).jpg","Ademola Lookman against Derby 2.jpg"],
- "Alejandro Grimaldo":["Alex Grimaldo Argentina v Spain 19 July 2026-314 (face crop).jpg","Spain World Cup winners Argentina v Spain 19 July 2026-349 (Alejandro Grimaldo).jpg"],
+ "Alejandro Grimaldo":["Alex Grimaldo Argentina v Spain 19 July 2026-314 (face crop).jpg","Alex Grimaldo France v Spain 7.24.26-002.jpg"],
  "Morten Hjulmand":["Hjulmand.png","Milan Lecce 2023 Hjulmand 1.jpg"],
  "Pablo Barrios (footballer)":[]
 }
@@ -229,10 +229,17 @@ for title,filename in PLAYERS.items():
      if len(faces)!=1:raise ValueError("Portrait requires exactly one detectable face; found "+str(len(faces)))
      x,y,w,h=faces[0]
      if w < pic.width*0.075 or h < pic.height*0.075:raise ValueError("Face too small for guessing game")
+     # Crop around the verified single face so the game shows a recognizable portrait.
+     cx,cy=x+w/2,y+h/2
+     crop_w=min(pic.width,max(w*3.2,240))
+     crop_h=min(pic.height,max(h*4.0,320))
+     left=max(0,min(pic.width-crop_w,cx-crop_w/2))
+     top=max(0,min(pic.height-crop_h,cy-crop_h*0.36))
+     pic=pic.crop((int(left),int(top),int(left+crop_w),int(top+crop_h)))
     pic.thumbnail((900,1000))
     pic.save(OUT/filename,"WEBP",quality=83,method=5)
     credits=[c for c in credits if c.get("file")!=filename]
-    credits.append({"player":title,"file":filename,"source":item.get("descriptionurl"),"author":get("Artist"),"license":license_name,"license_url":license_url,"modified":"Resized and converted to WebP"})
+    credits.append({"player":title,"file":filename,"source":item.get("descriptionurl"),"author":get("Artist"),"license":license_name,"license_url":license_url,"modified":"Single-face crop, resized and converted to WebP"})
     saved=True
     break
    except Exception as error:
