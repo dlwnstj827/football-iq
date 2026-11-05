@@ -1,0 +1,40 @@
+name: Test free public lineup source
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  public-lineup-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch public match page and inspect starting XI
+        run: |
+          python3 -m pip install --quiet beautifulsoup4
+          python3 - <<'PY'
+          import re, urllib.request
+          from bs4 import BeautifulSoup
+          url="https://www.tntsports.co.uk/football/premier-league/2026-2027/live-liverpool-arsenal_mtc21883088/live-lineup.shtml"
+          req=urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0 (compatible; FootballIQResearch/1.0)"})
+          try:
+              with urllib.request.urlopen(req,timeout=25) as res:
+                  raw=res.read(2000000).decode("utf-8","replace")
+                  print("HTTP:",res.status,"HTML bytes:",len(raw))
+          except Exception as e:
+              print("FETCH FAILED:",type(e).__name__,str(e)[:250])
+              raise SystemExit(1)
+          soup=BeautifulSoup(raw,"html.parser")
+          for tag in soup(["script","style","noscript"]): tag.decompose()
+          text=" ".join(soup.stripped_strings)
+          print("Page title:",soup.title.get_text(" ",strip=True) if soup.title else "(missing)")
+          print("Lineup text mentions:",text.lower().count("formation"),"formation;",text.lower().count("liverpool"),"Liverpool")
+          for team in ("Liverpool","Arsenal"):
+              candidates=[m.start() for m in re.finditer(team,text,re.I)]
+              print("\\nTEAM:",team,"mentions:",len(candidates))
+              for at in candidates[:3]:
+                  print("CONTEXT:",text[max(0,at-90):at+350])
+          # Diagnostic only: do not claim verified XI or update live game.
+          print("\\nRESULT: Diagnostic completed. Review logs to determine if page provides usable XI data.")
+          PY
