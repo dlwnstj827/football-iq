@@ -1,0 +1,83 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Football IQ | 아스널 사진 검수</title><style>*{box-sizing:border-box}body{margin:0;background:#0b1220;color:#eef2ff;font-family:system-ui,"Malgun Gothic",sans-serif}main{max-width:1100px;margin:auto;padding:22px 16px}h1{font-size:24px;margin:0 0 8px}.sub{color:#aab5c9;margin:0 0 18px}.toolbar{position:sticky;top:0;z-index:3;background:#0b1220ee;padding:12px 0;display:flex;flex-wrap:wrap;gap:10px;align-items:center}.toolbar button{background:#2563eb;color:white;border:0;border-radius:8px;padding:10px 14px;cursor:pointer}.toolbar .count{margin-right:auto}#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:14px}.card{background:#17243a;border:1px solid #334155;border-radius:14px;overflow:hidden;padding:12px}.photo{height:180px;width:100%;background:#0f172a;border-radius:9px;display:flex;align-items:center;justify-content:center;overflow:hidden}.photo img{width:100%;height:100%;object-fit:contain}.photo span{color:#fca5a5;text-align:center;padding:10px}.name{font-size:17px;font-weight:700;margin:12px 0 4px}.source{font-size:12px;color:#94a3b8;min-height:18px}.buttons{display:flex;gap:6px;margin-top:12px}.buttons button{flex:1;padding:10px 3px;border:1px solid #475569;background:#243449;color:white;border-radius:8px;cursor:pointer;font-weight:700}.buttons button[data-state="ok"].selected{background:#166534}.buttons button[data-state="bad"].selected{background:#991b1b}.buttons button[data-state="hold"].selected{background:#92400e}.card:has(button[data-state="bad"].selected){border-color:#ef4444}#result{white-space:pre-wrap;background:#111b2b;padding:14px;border-radius:10px;margin-top:20px;line-height:1.8}a{color:#93c5fd}</style></head><body><main><h1>⚽ 아스널 선수 사진 검수</h1><p class="sub">24명 · 사진 높이 180px · 정상 / 오류 / 보류를 눌러 확인하세요. 사진은 게임과 동일하게 저장된 파일을 우선 사용합니다.</p><div class="toolbar"><strong class="count" id="count">검수 0 / 24</strong><button id="copy">오류 목록 복사</button><button id="reset">선택 초기화</button><a href="./play.html">게임으로 돌아가기</a></div><div id="grid"></div><div id="result">오류로 표시한 선수가 여기에 나타납니다.</div></main><script>const players=[{"name":"다비드 라야","wiki":"David Raya","file":null,"difficulty":"normal"},{"name":"케파 아리사발라가","wiki":"Kepa Arrizabalaga","file":null,"difficulty":"normal"},{"name":"일란 멜리에","wiki":"Illan Meslier","file":null,"difficulty":"hard"},{"name":"윌리엄 살리바","wiki":"William Saliba","file":null,"difficulty":"easy"},{"name":"크리스티안 모스케라","wiki":"Cristhian Mosquera","file":null,"difficulty":"normal"},{"name":"벤 화이트","wiki":"Ben White (footballer)","file":null,"difficulty":"normal"},{"name":"피에로 인카피에","wiki":"Piero Hincapié","file":null,"difficulty":"normal"},{"name":"가브리에우 마갈량이스","wiki":"Gabriel Magalhães","file":null,"difficulty":"easy"},{"name":"위리엔 팀버르","wiki":"Jurriën Timber","file":null,"difficulty":"normal"},{"name":"에즈리 콘사","wiki":"Ezri Konsa","file":null,"difficulty":"normal"},{"name":"리카르도 칼라피오리","wiki":"Riccardo Calafiori","file":null,"difficulty":"normal"},{"name":"마일스 루이스스켈리","wiki":"Myles Lewis-Skelly","file":null,"difficulty":"normal"},{"name":"마르틴 외데고르","wiki":"Martin Ødegaard","file":null,"difficulty":"easy"},{"name":"에베레치 에제","wiki":"Eberechi Eze","file":null,"difficulty":"easy"},{"name":"미켈 메리노","wiki":"Mikel Merino","file":null,"difficulty":"normal"},{"name":"마르틴 수비멘디","wiki":"Martín Zubimendi","file":null,"difficulty":"normal"},{"name":"브루누 기마랑이스","wiki":"Bruno Guimarães","file":null,"difficulty":"easy"},{"name":"데클런 라이스","wiki":"Declan Rice","file":null,"difficulty":"easy"},{"name":"부카요 사카","wiki":"Bukayo Saka","file":null,"difficulty":"easy"},{"name":"빅토르 요케레스","wiki":"Viktor Gyökeres","file":null,"difficulty":"easy"},{"name":"크리스토스 촐리스","wiki":"Christos Tzolis","file":null,"difficulty":"hard"},{"name":"노니 마두에케","wiki":"Noni Madueke","file":null,"difficulty":"normal"},{"name":"카이 하베르츠","wiki":"Kai Havertz","file":null,"difficulty":"normal"},{"name":"맥스 다우먼","wiki":"Max Dowman","file":null,"difficulty":"hard"}];
+const state = {};
+const grid = document.getElementById("grid");
+function renderResult() {
+ const bad = players.filter(p => state[p.name] === "bad").map(p => p.name);
+ const hold = players.filter(p => state[p.name] === "hold").map(p => p.name);
+ document.getElementById("count").textContent = "검수 " + Object.keys(state).length + " / " + players.length;
+ document.getElementById("result").textContent = "사진 오류 (" + bad.length + "명): " + (bad.join(", ") || "없음") + "\n보류 (" + hold.length + "명): " + (hold.join(", ") || "없음");
+}
+async function loadFallback(img, p, photo, source) {
+ source.textContent = "위키백과 대체 사진";
+ try {
+  const url = "https://en.wikipedia.org/w/api.php?action=query&titles=" + encodeURIComponent(p.wiki) + "&prop=pageimages&format=json&piprop=thumbnail&pithumbsize=700&origin=*";
+  const res = await fetch(url);
+  const data = await res.json();
+  const page = Object.values(data.query.pages)[0];
+  if (!page || !page.thumbnail) throw new Error("No photo");
+  img.onerror = () => { photo.textContent = "사진 불러오기 실패"; source.textContent = "로드 실패"; };
+  img.src = page.thumbnail.source;
+ } catch(e) {
+  photo.textContent = "사진 불러오기 실패";
+  source.textContent = "로드 실패";
+ }
+}
+players.forEach((p, i) => {
+ const card = document.createElement("article");
+ card.className = "card";
+ const photo = document.createElement("div");
+ photo.className = "photo";
+ const img = document.createElement("img");
+ img.alt = p.name + " 사진";
+ img.loading = "lazy";
+ const source = document.createElement("div");
+ source.className = "source";
+ source.textContent = "위키백과 사진 후보 (미검수)";
+ img.onerror = () => {
+  if(p.wiki==="Xavi Espart"){
+    photo.textContent="로컬 사진 미확보 · 아래 공식 선수 프로필에서 확인";
+    source.textContent="FC 아스널 공식 사진 · 재사용 권한 미확인";
+    return;
+  }
+  loadFallback(img, p, photo, source);
+ };
+ if(p.file)img.src="./images/players/"+p.file;else loadFallback(img,p,photo,source);
+ photo.appendChild(img);
+ const title = document.createElement("div");
+ title.className = "name";
+ title.textContent = (i + 1) + ". " + p.name;
+ const buttons = document.createElement("div");
+ buttons.className = "buttons";
+ [["ok","정상"],["bad","오류"],["hold","보류"]].forEach(([value, label]) => {
+  const button = document.createElement("button");
+  button.dataset.state = value;
+  button.textContent = label;
+  button.addEventListener("click", () => {
+   state[p.name] = value;
+   buttons.querySelectorAll("button").forEach(b => b.classList.toggle("selected", b.dataset.state === value));
+   renderResult();
+  });
+  buttons.appendChild(button);
+ });
+ if(p.wiki==="Xavi Espart"){
+  const link=document.createElement("a");
+  link.href="https://www.fcbarcelona.com/en/football/first-team/players/141001/xavi-espart";
+  link.target="_blank";link.rel="noopener noreferrer";
+  link.textContent="사비 에스파르트 공식 프로필 사진 확인 ↗";
+  link.style.cssText="display:block;font-size:13px;margin:8px 0";
+  card.appendChild(link);
+ }
+ card.append(photo, title, source, buttons);
+ grid.appendChild(card);
+});
+document.getElementById("copy").addEventListener("click", async () => {
+ const value = document.getElementById("result").textContent;
+ try { await navigator.clipboard.writeText(value); alert("오류 목록을 복사했어!"); }
+ catch(e) { prompt("아래 내용을 복사해 줘", value); }
+});
+document.getElementById("reset").addEventListener("click", () => {
+ Object.keys(state).forEach(key => delete state[key]);
+ document.querySelectorAll(".selected").forEach(button => button.classList.remove("selected"));
+ renderResult();
+});
+renderResult();</script></body></html>
