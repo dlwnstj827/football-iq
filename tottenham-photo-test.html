@@ -7,20 +7,26 @@ function renderResult() {
  document.getElementById("count").textContent = "검수 " + Object.keys(state).length + " / " + players.length;
  document.getElementById("result").textContent = "사진 오류 (" + bad.length + "명): " + (bad.join(", ") || "없음") + "\n보류 (" + hold.length + "명): " + (hold.join(", ") || "없음");
 }
-async function loadFallback(img, p, photo, source) {
- source.textContent = "위키백과 대체 사진";
- try {
-  const url = "https://en.wikipedia.org/w/api.php?action=query&titles=" + encodeURIComponent(p.wiki) + "&prop=pageimages&format=json&piprop=thumbnail&pithumbsize=700&origin=*";
-  const res = await fetch(url);
-  const data = await res.json();
-  const page = Object.values(data.query.pages)[0];
-  if (!page || !page.thumbnail) throw new Error("No photo");
-  img.onerror = () => { photo.textContent = "사진 불러오기 실패"; source.textContent = "로드 실패"; };
-  img.src = page.thumbnail.source;
- } catch(e) {
-  photo.textContent = "사진 불러오기 실패";
-  source.textContent = "로드 실패";
- }
+const fixedCommons={
+ "Brandon Austin (footballer)":"Brandon Austin in training 25-08-2019.jpeg",
+ "Andrew Robertson (footballer)":"Andrew Robertson 2019.jpg",
+ "Mateus Fernandes":"Mateus Fernandes 04032026 (3).jpg"
+};
+const alternateWiki={
+ "Antonín Kinský":["Antonín Kinský (footballer, born 2003)","Antonín Kinský (footballer)"],
+ "Savinho":["Sávio (footballer, born 2004)","Savinho (footballer)","Sávio Moreira de Oliveira"]
+};
+async function loadFallback(img,p,photo,source){
+ const commons=fixedCommons[p.wiki];
+ if(commons){img.onerror=()=>{photo.textContent="사진 불러오기 실패";source.textContent="로드 실패"};img.src="https://commons.wikimedia.org/wiki/Special:Redirect/file/"+encodeURIComponent(commons)+"?width=700";source.textContent="Wikimedia Commons 사진 후보";return;}
+ const titles=[p.wiki,...(alternateWiki[p.wiki]||[])];
+ for(const title of titles){try{
+  const url="https://en.wikipedia.org/w/api.php?action=query&titles="+encodeURIComponent(title)+"&prop=pageimages&format=json&piprop=thumbnail&pithumbsize=700&origin=*";
+  const res=await fetch(url);if(!res.ok)continue;const data=await res.json();const page=Object.values(data.query.pages)[0];if(!page?.thumbnail?.source)continue;
+  await new Promise((resolve,reject)=>{const probe=new Image();probe.onload=resolve;probe.onerror=reject;probe.src=page.thumbnail.source});
+  img.onerror=()=>{photo.textContent="사진 불러오기 실패";source.textContent="로드 실패"};img.src=page.thumbnail.source;source.textContent="위키백과 사진 후보: "+title;return;
+ }catch(e){}}
+ photo.textContent="사진 불러오기 실패";source.textContent="로드 실패";
 }
 players.forEach((p, i) => {
  const card = document.createElement("article");
@@ -34,11 +40,7 @@ players.forEach((p, i) => {
  source.className = "source";
  source.textContent = "위키백과 사진 후보 (미검수)";
  img.onerror = () => {
-  if(p.wiki==="Xavi Espart"){
-    photo.textContent="로컬 사진 미확보 · 아래 공식 선수 프로필에서 확인";
-    source.textContent="FC 토트넘 공식 사진 · 재사용 권한 미확인";
-    return;
-  }
+  
   loadFallback(img, p, photo, source);
  };
  if(p.file)img.src="./images/players/"+p.file;else loadFallback(img,p,photo,source);
@@ -59,14 +61,7 @@ players.forEach((p, i) => {
   });
   buttons.appendChild(button);
  });
- if(p.wiki==="Xavi Espart"){
-  const link=document.createElement("a");
-  link.href="https://www.fcbarcelona.com/en/football/first-team/players/141001/xavi-espart";
-  link.target="_blank";link.rel="noopener noreferrer";
-  link.textContent="사비 에스파르트 공식 프로필 사진 확인 ↗";
-  link.style.cssText="display:block;font-size:13px;margin:8px 0";
-  card.appendChild(link);
- }
+ 
  card.append(photo, title, source, buttons);
  grid.appendChild(card);
 });
