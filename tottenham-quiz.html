@@ -181,7 +181,11 @@ async function tryLocalPhoto(p){
   return url;
  }catch{return null}
 }
+const tottenhamPhotoOverrides={"Brandon Austin (footballer)":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Brandon%20Austin%20in%20training%2025-08-2019.jpeg?width=700","Andrew Robertson (footballer)":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Andrew%20Robertson%202019.jpg?width=700","Mateus Fernandes":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Mateus%20Fernandes%2004032026%20(3).jpg?width=700"};
 async function fetchPhoto(p){
+ if(tottenhamPhotoOverrides[p.wiki])return tottenhamPhotoOverrides[p.wiki];
+ if(p.wiki==='Antonín Kinský')p={...p,wiki:'Antonín Kinský (footballer, born 2003)'};
+ if(p.wiki==='Savinho')p={...p,wiki:'Sávio (footballer, born 2004)'};
  // Direct licensed solo portrait while the local image importer updates.
  if(p.wiki==="Julián Álvarez (footballer)")return "https://commons.wikimedia.org/wiki/Special:Redirect/file/Julian_Alvarez_Argentina_v_Spain_19_July_2026-052_%28cropped%29.jpg?width=900";
  if(photoCache.has(p.wiki))return photoCache.get(p.wiki);
