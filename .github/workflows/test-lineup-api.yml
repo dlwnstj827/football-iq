@@ -1,0 +1,40 @@
+name: Test football lineup API
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check API key and current-season fixture access
+        env:
+          APISPORTS_KEY: ${{ secrets.APISPORTS_KEY }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request, urllib.parse
+          key=os.getenv("APISPORTS_KEY","")
+          if not key:
+              raise SystemExit("ERROR: APISPORTS_KEY secret is missing.")
+          def fetch(path, params):
+              url="https://v3.football.api-sports.io/"+path+"?"+urllib.parse.urlencode(params)
+              req=urllib.request.Request(url,headers={"x-apisports-key":key})
+              with urllib.request.urlopen(req,timeout=25) as r:
+                  return json.load(r)
+          data=fetch("fixtures",{"league":39,"season":2026,"last":1})
+          print("Fixture lookup: results =",data.get("results"),"; errors =",json.dumps(data.get("errors"),ensure_ascii=False))
+          games=data.get("response") or []
+          if not games:
+              print("RESULT: Current-season fixtures unavailable on this plan or no completed fixtures returned.")
+          else:
+              g=games[0]
+              print("Sample match:",g.get("fixture",{}).get("date"),g.get("teams",{}).get("home",{}).get("name"),"vs",g.get("teams",{}).get("away",{}).get("name"))
+              lineup=fetch("fixtures/lineups",{"fixture":g["fixture"]["id"]})
+              print("Lineup lookup: results =",lineup.get("results"),"; errors =",json.dumps(lineup.get("errors"),ensure_ascii=False))
+              for side in lineup.get("response") or []:
+                  starters=side.get("startXI") or []
+                  print("Team:",side.get("team",{}).get("name"),"formation:",side.get("formation"),"starters:",len(starters),"numbers available:",sum(x.get("player",{}).get("number") is not None for x in starters))
+          PY
